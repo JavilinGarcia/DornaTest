@@ -16,5 +16,8 @@ class HomeInteractor: NSObject {
 }
 
 extension HomeInteractor: HomeInteractorProtocol {
+    func viewIsReady() {
+        
+    }
     
 }

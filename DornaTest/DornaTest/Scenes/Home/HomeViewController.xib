@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DornaTest" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="evU-IS-WJY" id="5GZ-wT-nKU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="k0I-c1-AmI"/>
             </connections>
         </placeholder>
@@ -19,17 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HomeViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8B-V5-4mj">
-                    <rect key="frame" x="108.5" y="323" width="157.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="evU-IS-WJY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="u8B-V5-4mj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Z0R-rJ-vBz"/>
-                <constraint firstItem="u8B-V5-4mj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qiK-6p-32m"/>
+                <constraint firstItem="evU-IS-WJY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Arj-CF-xfk"/>
+                <constraint firstAttribute="bottom" secondItem="evU-IS-WJY" secondAttribute="bottom" id="R9l-LY-XwI"/>
+                <constraint firstAttribute="trailing" secondItem="evU-IS-WJY" secondAttribute="trailing" id="gUD-9R-Zp4"/>
+                <constraint firstItem="evU-IS-WJY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="who-9d-U86"/>
             </constraints>
         </view>
     </objects>

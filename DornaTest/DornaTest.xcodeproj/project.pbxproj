@@ -91,6 +91,12 @@
 		59974E772032156E003D3BBE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */; };
 		59974E782032156E003D3BBE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */; };
 		59974E792032156E003D3BBE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */; };
+		59E6C62320321D3300F9F54B /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */; };
+		59E6C62420321D3300F9F54B /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */; };
+		59E6C62520321D3300F9F54B /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */; };
+		59E6C62620321D3300F9F54B /* HomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E6C62220321D3300F9F54B /* HomeListTableViewCell.xib */; };
+		59E6C62720321D3300F9F54B /* HomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E6C62220321D3300F9F54B /* HomeListTableViewCell.xib */; };
+		59E6C62820321D3300F9F54B /* HomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59E6C62220321D3300F9F54B /* HomeListTableViewCell.xib */; };
 		F392E9E90A85826DA4097FDC /* Pods_DornaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4A81EA7416836CEA0D921A /* Pods_DornaTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +174,8 @@
 		59974E562032156E003D3BBE /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		59974E572032156E003D3BBE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListTableViewCell.swift; sourceTree = "<group>"; };
+		59E6C62220321D3300F9F54B /* HomeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListTableViewCell.xib; sourceTree = "<group>"; };
 		740078528883E363CC925ED6 /* Pods-DornaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DornaTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DornaTestUITests/Pods-DornaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7DC7612843D4D7B705FA6982 /* Pods-DornaTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DornaTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DornaTestUITests/Pods-DornaTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A722E725D3C388BE707C5406 /* Pods-DornaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DornaTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DornaTestTests/Pods-DornaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -338,6 +346,7 @@
 		59974D4F20320930003D3BBE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				59E6C62020321D0F00F9F54B /* Cells */,
 				59974E3020321104003D3BBE /* HomePresenter.swift */,
 				59974E3120321104003D3BBE /* HomeRouter.swift */,
 				59974E3220321104003D3BBE /* HomeViewController.swift */,
@@ -373,6 +382,15 @@
 				59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		59E6C62020321D0F00F9F54B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */,
+				59E6C62220321D3300F9F54B /* HomeListTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A17C58CD7AA09C5E147FD975 /* Pods */ = {
@@ -516,6 +534,7 @@
 			files = (
 				59974E6B2032156E003D3BBE /* OpenSans-Bold.ttf in Resources */,
 				59974E5C2032156E003D3BBE /* OpenSans-Semibold.ttf in Resources */,
+				59E6C62620321D3300F9F54B /* HomeListTableViewCell.xib in Resources */,
 				59974E622032156E003D3BBE /* OpenSans-Italic.ttf in Resources */,
 				59974E652032156E003D3BBE /* OpenSans-ExtraBold.ttf in Resources */,
 				59974E6E2032156E003D3BBE /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -546,6 +565,7 @@
 				59974E602032156E003D3BBE /* OpenSans-Light.ttf in Resources */,
 				59974E632032156E003D3BBE /* OpenSans-Italic.ttf in Resources */,
 				59974E722032156E003D3BBE /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				59E6C62720321D3300F9F54B /* HomeListTableViewCell.xib in Resources */,
 				59974E5A2032156E003D3BBE /* Localizable.strings in Resources */,
 				59974E662032156E003D3BBE /* OpenSans-ExtraBold.ttf in Resources */,
 			);
@@ -565,6 +585,7 @@
 				59974E612032156E003D3BBE /* OpenSans-Light.ttf in Resources */,
 				59974E642032156E003D3BBE /* OpenSans-Italic.ttf in Resources */,
 				59974E732032156E003D3BBE /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				59E6C62820321D3300F9F54B /* HomeListTableViewCell.xib in Resources */,
 				59974E5B2032156E003D3BBE /* Localizable.strings in Resources */,
 				59974E672032156E003D3BBE /* OpenSans-ExtraBold.ttf in Resources */,
 			);
@@ -761,6 +782,7 @@
 				59974D2720320726003D3BBE /* UIImage+Extension.swift in Sources */,
 				59974D1E20320726003D3BBE /* Utils.swift in Sources */,
 				59974D2220320726003D3BBE /* UIColor+Extension.swift in Sources */,
+				59E6C62320321D3300F9F54B /* HomeListTableViewCell.swift in Sources */,
 				59974D3120320726003D3BBE /* JGCLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +797,7 @@
 				59974E3B20321104003D3BBE /* HomeRouter.swift in Sources */,
 				59974E3820321104003D3BBE /* HomePresenter.swift in Sources */,
 				59974E3E20321104003D3BBE /* HomeViewController.swift in Sources */,
+				59E6C62420321D3300F9F54B /* HomeListTableViewCell.swift in Sources */,
 				59974E4720321104003D3BBE /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -789,6 +812,7 @@
 				59974E3C20321104003D3BBE /* HomeRouter.swift in Sources */,
 				59974E3920321104003D3BBE /* HomePresenter.swift in Sources */,
 				59974E3F20321104003D3BBE /* HomeViewController.swift in Sources */,
+				59E6C62520321D3300F9F54B /* HomeListTableViewCell.swift in Sources */,
 				59974E4820321104003D3BBE /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

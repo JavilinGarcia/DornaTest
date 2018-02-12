@@ -18,6 +18,7 @@ class HomePresenter: LibPresenter {
 extension HomePresenter: HomePresenterProtocol {
     
     func viewIsReady() {
+        interactor.viewIsReady()
     }
     
     //COMMON

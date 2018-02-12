@@ -12,11 +12,11 @@ protocol HomeViewControllerProtocol: LibViewControllerProtocol {
     var presenter: HomePresenterProtocol! { get }
 }
 
-protocol HomePresenterProtocol: UITextFieldDelegate, LibPresenterProtocol {
+protocol HomePresenterProtocol: LibPresenterProtocol {
     var viewController: HomeViewControllerProtocol! { get }
 }
 
-protocol HomeInteractorProtocol {
+protocol HomeInteractorProtocol: LibInteractorProtocol {
     var presenter: HomePresenterProtocol! { get }
     var router: HomeRouterProtocol! { get }
 }
