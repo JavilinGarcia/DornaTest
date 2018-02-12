@@ -1,0 +1,28 @@
+/* 
+ Localizable.strings
+ DornaTest
+ Created by Javier Garcia Castro on 12/2/18.
+ Copyright © 2018 Javier Garcia Castro. All rights reserved.
+*/
+
+
+// MARK: - Buttons
+"accept_button" = "Aceptar";
+"cancel_button" = "Cancelar";
+"continue_button" = "Continuar";
+"finish_button" = "Finalizar";
+
+"loading_text" = "Cargando...";
+"info_title" = "Información";
+
+// MARK: - Errors
+"error_title" = "Error";
+"error_title_attention" = "Atención";
+"error_title_info" = "Información";
+"error_generic" = "Error desconocido";
+"error_no_internet" = "No hay conexión.";
+"error_server_down" = "No se ha podido establecer conexión con el servidor. Inténtelo de nuevo mas tarde.";
+
+//MARK: - Titles
+"home_list_title" = "Grandes premios";
+"home_detail_title" = "Detalle gran premio";
