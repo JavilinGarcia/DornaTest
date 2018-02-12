@@ -1,0 +1,6 @@
+framework module Pods_DornaTest {
+  umbrella header "Pods-DornaTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
