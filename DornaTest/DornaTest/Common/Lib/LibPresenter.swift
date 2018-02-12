@@ -2,7 +2,7 @@
 //  Common
 //  DornaTest
 //
-//  Created from JGC Templates on 12/2/18.
+// Created by Javier Garcia Castro on 12/2/18. 
 // Copyright © 2018 Javier Garcia Castro. All rights reserved.
 //
 
@@ -20,6 +20,10 @@ class LibPresenter: NSObject {
     
     func showAlertWithTitle(title: String, message: String, viewController: LibViewControllerProtocol!) {
         viewController.showAlertWithTitle(title: title, message: message)
+    }
+    
+    func showError(error: Error, viewController: LibViewControllerProtocol!) {
+        viewController.showError(error: error)
     }
 }
 

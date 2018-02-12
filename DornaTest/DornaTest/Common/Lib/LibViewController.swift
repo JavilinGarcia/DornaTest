@@ -2,7 +2,7 @@
 //  Common
 //  DornaTest
 //
-//  Created from JGC Templates on 12/2/18.
+// Created by Javier Garcia Castro on 12/2/18. 
 // Copyright © 2018 Javier Garcia Castro. All rights reserved.
 //
 
@@ -55,5 +55,14 @@ extension LibViewController: LibViewControllerProtocol {
         }
     }
     
+    func showError(error: Error) {
+        let alert_controller = UIAlertController.init(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        
+        let ok_action = UIAlertAction.init(title: "Ok", style: .default, handler: nil)
+        
+        alert_controller.addAction(ok_action)
+        
+        present(alert_controller, animated: true, completion: nil)
+    }
 }
 

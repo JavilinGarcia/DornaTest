@@ -2,7 +2,7 @@
 //  Common
 //  DornaTest
 //
-//  Created from JGC Templates on 12/2/18.
+// Created by Javier Garcia Castro on 12/2/18. 
 // Copyright © 2018 Javier Garcia Castro. All rights reserved.
 //
 
@@ -19,6 +19,8 @@ protocol LibViewControllerProtocol {
     func showLoading(loadingMessage: String)
     func dismissLoading()
     func showAlertWithTitle(title: String, message: String)
+    func showError(error: Error)
+
 }
 
 protocol LibInteractorProtocol {

@@ -2,7 +2,7 @@
 //  Common
 //  DornaTest
 //
-//  Created from JGC Templates on 12/2/18.
+// Created by Javier Garcia Castro on 12/2/18. 
 // Copyright © 2018 Javier Garcia Castro. All rights reserved.
 //
 

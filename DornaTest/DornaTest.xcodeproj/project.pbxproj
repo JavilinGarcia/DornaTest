@@ -35,6 +35,27 @@
 		59974D2F20320726003D3BBE /* LibProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1820320726003D3BBE /* LibProtocols.swift */; };
 		59974D3020320726003D3BBE /* LayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1A20320726003D3BBE /* LayerView.swift */; };
 		59974D3120320726003D3BBE /* JGCLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1B20320726003D3BBE /* JGCLoadingView.swift */; };
+		59974E3720321104003D3BBE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3020321104003D3BBE /* HomePresenter.swift */; };
+		59974E3820321104003D3BBE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3020321104003D3BBE /* HomePresenter.swift */; };
+		59974E3920321104003D3BBE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3020321104003D3BBE /* HomePresenter.swift */; };
+		59974E3A20321104003D3BBE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3120321104003D3BBE /* HomeRouter.swift */; };
+		59974E3B20321104003D3BBE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3120321104003D3BBE /* HomeRouter.swift */; };
+		59974E3C20321104003D3BBE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3120321104003D3BBE /* HomeRouter.swift */; };
+		59974E3D20321104003D3BBE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3220321104003D3BBE /* HomeViewController.swift */; };
+		59974E3E20321104003D3BBE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3220321104003D3BBE /* HomeViewController.swift */; };
+		59974E3F20321104003D3BBE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3220321104003D3BBE /* HomeViewController.swift */; };
+		59974E4020321104003D3BBE /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3320321104003D3BBE /* HomeProtocols.swift */; };
+		59974E4120321104003D3BBE /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3320321104003D3BBE /* HomeProtocols.swift */; };
+		59974E4220321104003D3BBE /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3320321104003D3BBE /* HomeProtocols.swift */; };
+		59974E4320321104003D3BBE /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3420321104003D3BBE /* HomeAssembly.swift */; };
+		59974E4420321104003D3BBE /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3420321104003D3BBE /* HomeAssembly.swift */; };
+		59974E4520321104003D3BBE /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3420321104003D3BBE /* HomeAssembly.swift */; };
+		59974E4620321104003D3BBE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3520321104003D3BBE /* HomeInteractor.swift */; };
+		59974E4720321104003D3BBE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3520321104003D3BBE /* HomeInteractor.swift */; };
+		59974E4820321104003D3BBE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3520321104003D3BBE /* HomeInteractor.swift */; };
+		59974E4920321104003D3BBE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59974E3620321104003D3BBE /* HomeViewController.xib */; };
+		59974E4A20321104003D3BBE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59974E3620321104003D3BBE /* HomeViewController.xib */; };
+		59974E4B20321104003D3BBE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59974E3620321104003D3BBE /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +110,13 @@
 		59974D1820320726003D3BBE /* LibProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibProtocols.swift; sourceTree = "<group>"; };
 		59974D1A20320726003D3BBE /* LayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerView.swift; sourceTree = "<group>"; };
 		59974D1B20320726003D3BBE /* JGCLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGCLoadingView.swift; sourceTree = "<group>"; };
+		59974E3020321104003D3BBE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		59974E3120321104003D3BBE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		59974E3220321104003D3BBE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		59974E3320321104003D3BBE /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		59974E3420321104003D3BBE /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		59974E3520321104003D3BBE /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		59974E3620321104003D3BBE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				59974CFF20320726003D3BBE /* Common */,
+				59974D32203208A8003D3BBE /* Scenes */,
 				59974CCD20320712003D3BBE /* Assets.xcassets */,
 				59974CCF20320712003D3BBE /* LaunchScreen.storyboard */,
 				59974CD220320712003D3BBE /* AppDelegate.swift */,
@@ -234,6 +263,28 @@
 				59974D1B20320726003D3BBE /* JGCLoadingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		59974D32203208A8003D3BBE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				59974D4F20320930003D3BBE /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		59974D4F20320930003D3BBE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				59974E3020321104003D3BBE /* HomePresenter.swift */,
+				59974E3120321104003D3BBE /* HomeRouter.swift */,
+				59974E3220321104003D3BBE /* HomeViewController.swift */,
+				59974E3320321104003D3BBE /* HomeProtocols.swift */,
+				59974E3420321104003D3BBE /* HomeAssembly.swift */,
+				59974E3520321104003D3BBE /* HomeInteractor.swift */,
+				59974E3620321104003D3BBE /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +397,7 @@
 				59974CD520320712003D3BBE /* Main.storyboard in Resources */,
 				59974CCE20320712003D3BBE /* Assets.xcassets in Resources */,
 				59974CD120320712003D3BBE /* LaunchScreen.storyboard in Resources */,
+				59974E4920321104003D3BBE /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59974E4A20321104003D3BBE /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59974E4B20321104003D3BBE /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,15 +430,21 @@
 				59974D2520320726003D3BBE /* NSOBject+Extension.swift in Sources */,
 				59974D2820320726003D3BBE /* Bundle+Extension.swift in Sources */,
 				59974D1D20320726003D3BBE /* DataManager.swift in Sources */,
+				59974E4320321104003D3BBE /* HomeAssembly.swift in Sources */,
 				59974CD720320712003D3BBE /* ViewController.swift in Sources */,
 				59974D2F20320726003D3BBE /* LibProtocols.swift in Sources */,
 				59974D2D20320726003D3BBE /* LibViewController.swift in Sources */,
+				59974E4620321104003D3BBE /* HomeInteractor.swift in Sources */,
 				59974D2120320726003D3BBE /* UIImageView+Extension.swift in Sources */,
 				59974D2C20320726003D3BBE /* String+Extension.swift in Sources */,
+				59974E3D20321104003D3BBE /* HomeViewController.swift in Sources */,
 				59974CD320320712003D3BBE /* AppDelegate.swift in Sources */,
+				59974E4020321104003D3BBE /* HomeProtocols.swift in Sources */,
 				59974D2920320726003D3BBE /* UIScroll+Extension.swift in Sources */,
 				59974D2B20320726003D3BBE /* NSData+Extension.swift in Sources */,
+				59974E3A20321104003D3BBE /* HomeRouter.swift in Sources */,
 				59974D2A20320726003D3BBE /* NSDictionary+Extension.swift in Sources */,
+				59974E3720321104003D3BBE /* HomePresenter.swift in Sources */,
 				59974D2620320726003D3BBE /* UIView+Extension.swift in Sources */,
 				59974D3020320726003D3BBE /* LayerView.swift in Sources */,
 				59974D2420320726003D3BBE /* UILabel+Extension.swift in Sources */,
@@ -400,7 +460,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59974E4420321104003D3BBE /* HomeAssembly.swift in Sources */,
 				59974CE720320712003D3BBE /* DornaTestTests.swift in Sources */,
+				59974E4120321104003D3BBE /* HomeProtocols.swift in Sources */,
+				59974E3B20321104003D3BBE /* HomeRouter.swift in Sources */,
+				59974E3820321104003D3BBE /* HomePresenter.swift in Sources */,
+				59974E3E20321104003D3BBE /* HomeViewController.swift in Sources */,
+				59974E4720321104003D3BBE /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +474,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59974E4520321104003D3BBE /* HomeAssembly.swift in Sources */,
 				59974CF220320712003D3BBE /* DornaTestUITests.swift in Sources */,
+				59974E4220321104003D3BBE /* HomeProtocols.swift in Sources */,
+				59974E3C20321104003D3BBE /* HomeRouter.swift in Sources */,
+				59974E3920321104003D3BBE /* HomePresenter.swift in Sources */,
+				59974E3F20321104003D3BBE /* HomeViewController.swift in Sources */,
+				59974E4820321104003D3BBE /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

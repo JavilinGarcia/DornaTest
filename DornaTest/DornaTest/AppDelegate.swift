@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  DornaTest
 //
-//  Created from JGC Templates on 12/2/18.
+// Created by Javier Garcia Castro on 12/2/18. 
 // Copyright © 2018 Javier Garcia Castro. All rights reserved.
 //
 
@@ -12,9 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    var viewController:UIViewController?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setInitialViewController()
+        
         return true
     }
 
@@ -38,6 +42,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func setInitialViewController() {
+        let viewController = HomeAssembly.sharedInstance.configure()
+        let navigationController = UINavigationController.init(rootViewController: viewController)
+        
+        navigationController.navigationBar.barTintColor =  UIColor.init(hex: "2DA9A9")
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController.navigationBar.tintColor = .white
+        
+        window?.rootViewController = navigationController
     }
 }
 
