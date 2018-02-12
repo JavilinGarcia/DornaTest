@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59974CCE20320712003D3BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59974CCD20320712003D3BBE /* Assets.xcassets */; };
+		59974CD120320712003D3BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59974CCF20320712003D3BBE /* LaunchScreen.storyboard */; };
+		59974CD320320712003D3BBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974CD220320712003D3BBE /* AppDelegate.swift */; };
+		59974CD520320712003D3BBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59974CD420320712003D3BBE /* Main.storyboard */; };
+		59974CD720320712003D3BBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974CD620320712003D3BBE /* ViewController.swift */; };
+		59974CDC20320712003D3BBE /* DornaTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59974CDA20320712003D3BBE /* DornaTest.xcdatamodeld */; };
+		59974CE720320712003D3BBE /* DornaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974CE620320712003D3BBE /* DornaTestTests.swift */; };
+		59974CF220320712003D3BBE /* DornaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974CF120320712003D3BBE /* DornaTestUITests.swift */; };
+		59974D1C20320726003D3BBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0120320726003D3BBE /* Constants.swift */; };
+		59974D1D20320726003D3BBE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0320320726003D3BBE /* DataManager.swift */; };
+		59974D1E20320726003D3BBE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0420320726003D3BBE /* Utils.swift */; };
+		59974D2120320726003D3BBE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0920320726003D3BBE /* UIImageView+Extension.swift */; };
+		59974D2220320726003D3BBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0A20320726003D3BBE /* UIColor+Extension.swift */; };
+		59974D2320320726003D3BBE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0B20320726003D3BBE /* Date+Extension.swift */; };
+		59974D2420320726003D3BBE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0C20320726003D3BBE /* UILabel+Extension.swift */; };
+		59974D2520320726003D3BBE /* NSOBject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0D20320726003D3BBE /* NSOBject+Extension.swift */; };
+		59974D2620320726003D3BBE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0E20320726003D3BBE /* UIView+Extension.swift */; };
+		59974D2720320726003D3BBE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0F20320726003D3BBE /* UIImage+Extension.swift */; };
+		59974D2820320726003D3BBE /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1020320726003D3BBE /* Bundle+Extension.swift */; };
+		59974D2920320726003D3BBE /* UIScroll+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1120320726003D3BBE /* UIScroll+Extension.swift */; };
+		59974D2A20320726003D3BBE /* NSDictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1220320726003D3BBE /* NSDictionary+Extension.swift */; };
+		59974D2B20320726003D3BBE /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1320320726003D3BBE /* NSData+Extension.swift */; };
+		59974D2C20320726003D3BBE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1420320726003D3BBE /* String+Extension.swift */; };
+		59974D2D20320726003D3BBE /* LibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1620320726003D3BBE /* LibViewController.swift */; };
+		59974D2E20320726003D3BBE /* LibPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1720320726003D3BBE /* LibPresenter.swift */; };
+		59974D2F20320726003D3BBE /* LibProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1820320726003D3BBE /* LibProtocols.swift */; };
+		59974D3020320726003D3BBE /* LayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1A20320726003D3BBE /* LayerView.swift */; };
+		59974D3120320726003D3BBE /* JGCLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1B20320726003D3BBE /* JGCLoadingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59974CE320320712003D3BBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59974CC220320712003D3BBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59974CC920320712003D3BBE;
+			remoteInfo = DornaTest;
+		};
+		59974CEE20320712003D3BBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59974CC220320712003D3BBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59974CC920320712003D3BBE;
+			remoteInfo = DornaTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59974CCA20320712003D3BBE /* DornaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DornaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59974CCD20320712003D3BBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59974CD020320712003D3BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59974CD220320712003D3BBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59974CD420320712003D3BBE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		59974CD620320712003D3BBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59974CDB20320712003D3BBE /* DornaTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DornaTest.xcdatamodel; sourceTree = "<group>"; };
+		59974CDD20320712003D3BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59974CE220320712003D3BBE /* DornaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DornaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59974CE620320712003D3BBE /* DornaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DornaTestTests.swift; sourceTree = "<group>"; };
+		59974CE820320712003D3BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59974CED20320712003D3BBE /* DornaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DornaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59974CF120320712003D3BBE /* DornaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DornaTestUITests.swift; sourceTree = "<group>"; };
+		59974CF320320712003D3BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59974D0120320726003D3BBE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		59974D0320320726003D3BBE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		59974D0420320726003D3BBE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		59974D0920320726003D3BBE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		59974D0A20320726003D3BBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		59974D0B20320726003D3BBE /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		59974D0C20320726003D3BBE /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		59974D0D20320726003D3BBE /* NSOBject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOBject+Extension.swift"; sourceTree = "<group>"; };
+		59974D0E20320726003D3BBE /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		59974D0F20320726003D3BBE /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		59974D1020320726003D3BBE /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		59974D1120320726003D3BBE /* UIScroll+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScroll+Extension.swift"; sourceTree = "<group>"; };
+		59974D1220320726003D3BBE /* NSDictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Extension.swift"; sourceTree = "<group>"; };
+		59974D1320320726003D3BBE /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
+		59974D1420320726003D3BBE /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		59974D1620320726003D3BBE /* LibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibViewController.swift; sourceTree = "<group>"; };
+		59974D1720320726003D3BBE /* LibPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibPresenter.swift; sourceTree = "<group>"; };
+		59974D1820320726003D3BBE /* LibProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibProtocols.swift; sourceTree = "<group>"; };
+		59974D1A20320726003D3BBE /* LayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerView.swift; sourceTree = "<group>"; };
+		59974D1B20320726003D3BBE /* JGCLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGCLoadingView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59974CC720320712003D3BBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59974CDF20320712003D3BBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59974CEA20320712003D3BBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59974CC120320712003D3BBE = {
+			isa = PBXGroup;
+			children = (
+				59974CCC20320712003D3BBE /* DornaTest */,
+				59974CE520320712003D3BBE /* DornaTestTests */,
+				59974CF020320712003D3BBE /* DornaTestUITests */,
+				59974CCB20320712003D3BBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59974CCB20320712003D3BBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59974CCA20320712003D3BBE /* DornaTest.app */,
+				59974CE220320712003D3BBE /* DornaTestTests.xctest */,
+				59974CED20320712003D3BBE /* DornaTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59974CCC20320712003D3BBE /* DornaTest */ = {
+			isa = PBXGroup;
+			children = (
+				59974CFF20320726003D3BBE /* Common */,
+				59974CCD20320712003D3BBE /* Assets.xcassets */,
+				59974CCF20320712003D3BBE /* LaunchScreen.storyboard */,
+				59974CD220320712003D3BBE /* AppDelegate.swift */,
+				59974CD420320712003D3BBE /* Main.storyboard */,
+				59974CD620320712003D3BBE /* ViewController.swift */,
+				59974CDD20320712003D3BBE /* Info.plist */,
+				59974CDA20320712003D3BBE /* DornaTest.xcdatamodeld */,
+			);
+			path = DornaTest;
+			sourceTree = "<group>";
+		};
+		59974CE520320712003D3BBE /* DornaTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				59974CE620320712003D3BBE /* DornaTestTests.swift */,
+				59974CE820320712003D3BBE /* Info.plist */,
+			);
+			path = DornaTestTests;
+			sourceTree = "<group>";
+		};
+		59974CF020320712003D3BBE /* DornaTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59974CF120320712003D3BBE /* DornaTestUITests.swift */,
+				59974CF320320712003D3BBE /* Info.plist */,
+			);
+			path = DornaTestUITests;
+			sourceTree = "<group>";
+		};
+		59974CFF20320726003D3BBE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				59974D0020320726003D3BBE /* Utils */,
+				59974D0820320726003D3BBE /* Extensions */,
+				59974D1520320726003D3BBE /* Lib */,
+				59974D1920320726003D3BBE /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		59974D0020320726003D3BBE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				59974D0120320726003D3BBE /* Constants.swift */,
+				59974D0420320726003D3BBE /* Utils.swift */,
+				59974D0220320726003D3BBE /* DataManager */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		59974D0220320726003D3BBE /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				59974D0320320726003D3BBE /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		59974D0820320726003D3BBE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				59974D0920320726003D3BBE /* UIImageView+Extension.swift */,
+				59974D0A20320726003D3BBE /* UIColor+Extension.swift */,
+				59974D0B20320726003D3BBE /* Date+Extension.swift */,
+				59974D0C20320726003D3BBE /* UILabel+Extension.swift */,
+				59974D0D20320726003D3BBE /* NSOBject+Extension.swift */,
+				59974D0E20320726003D3BBE /* UIView+Extension.swift */,
+				59974D0F20320726003D3BBE /* UIImage+Extension.swift */,
+				59974D1020320726003D3BBE /* Bundle+Extension.swift */,
+				59974D1120320726003D3BBE /* UIScroll+Extension.swift */,
+				59974D1220320726003D3BBE /* NSDictionary+Extension.swift */,
+				59974D1320320726003D3BBE /* NSData+Extension.swift */,
+				59974D1420320726003D3BBE /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59974D1520320726003D3BBE /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				59974D1620320726003D3BBE /* LibViewController.swift */,
+				59974D1720320726003D3BBE /* LibPresenter.swift */,
+				59974D1820320726003D3BBE /* LibProtocols.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		59974D1920320726003D3BBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59974D1A20320726003D3BBE /* LayerView.swift */,
+				59974D1B20320726003D3BBE /* JGCLoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59974CC920320712003D3BBE /* DornaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59974CF620320712003D3BBE /* Build configuration list for PBXNativeTarget "DornaTest" */;
+			buildPhases = (
+				59974CC620320712003D3BBE /* Sources */,
+				59974CC720320712003D3BBE /* Frameworks */,
+				59974CC820320712003D3BBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DornaTest;
+			productName = DornaTest;
+			productReference = 59974CCA20320712003D3BBE /* DornaTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59974CE120320712003D3BBE /* DornaTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59974CF920320712003D3BBE /* Build configuration list for PBXNativeTarget "DornaTestTests" */;
+			buildPhases = (
+				59974CDE20320712003D3BBE /* Sources */,
+				59974CDF20320712003D3BBE /* Frameworks */,
+				59974CE020320712003D3BBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59974CE420320712003D3BBE /* PBXTargetDependency */,
+			);
+			name = DornaTestTests;
+			productName = DornaTestTests;
+			productReference = 59974CE220320712003D3BBE /* DornaTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59974CEC20320712003D3BBE /* DornaTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59974CFC20320712003D3BBE /* Build configuration list for PBXNativeTarget "DornaTestUITests" */;
+			buildPhases = (
+				59974CE920320712003D3BBE /* Sources */,
+				59974CEA20320712003D3BBE /* Frameworks */,
+				59974CEB20320712003D3BBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59974CEF20320712003D3BBE /* PBXTargetDependency */,
+			);
+			name = DornaTestUITests;
+			productName = DornaTestUITests;
+			productReference = 59974CED20320712003D3BBE /* DornaTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59974CC220320712003D3BBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Javier Garcia Castro";
+				TargetAttributes = {
+					59974CC920320712003D3BBE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					59974CE120320712003D3BBE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 59974CC920320712003D3BBE;
+					};
+					59974CEC20320712003D3BBE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 59974CC920320712003D3BBE;
+					};
+				};
+			};
+			buildConfigurationList = 59974CC520320712003D3BBE /* Build configuration list for PBXProject "DornaTest" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59974CC120320712003D3BBE;
+			productRefGroup = 59974CCB20320712003D3BBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59974CC920320712003D3BBE /* DornaTest */,
+				59974CE120320712003D3BBE /* DornaTestTests */,
+				59974CEC20320712003D3BBE /* DornaTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59974CC820320712003D3BBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59974CD520320712003D3BBE /* Main.storyboard in Resources */,
+				59974CCE20320712003D3BBE /* Assets.xcassets in Resources */,
+				59974CD120320712003D3BBE /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59974CE020320712003D3BBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59974CEB20320712003D3BBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59974CC620320712003D3BBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59974D2E20320726003D3BBE /* LibPresenter.swift in Sources */,
+				59974CDC20320712003D3BBE /* DornaTest.xcdatamodeld in Sources */,
+				59974D2320320726003D3BBE /* Date+Extension.swift in Sources */,
+				59974D2520320726003D3BBE /* NSOBject+Extension.swift in Sources */,
+				59974D2820320726003D3BBE /* Bundle+Extension.swift in Sources */,
+				59974D1D20320726003D3BBE /* DataManager.swift in Sources */,
+				59974CD720320712003D3BBE /* ViewController.swift in Sources */,
+				59974D2F20320726003D3BBE /* LibProtocols.swift in Sources */,
+				59974D2D20320726003D3BBE /* LibViewController.swift in Sources */,
+				59974D2120320726003D3BBE /* UIImageView+Extension.swift in Sources */,
+				59974D2C20320726003D3BBE /* String+Extension.swift in Sources */,
+				59974CD320320712003D3BBE /* AppDelegate.swift in Sources */,
+				59974D2920320726003D3BBE /* UIScroll+Extension.swift in Sources */,
+				59974D2B20320726003D3BBE /* NSData+Extension.swift in Sources */,
+				59974D2A20320726003D3BBE /* NSDictionary+Extension.swift in Sources */,
+				59974D2620320726003D3BBE /* UIView+Extension.swift in Sources */,
+				59974D3020320726003D3BBE /* LayerView.swift in Sources */,
+				59974D2420320726003D3BBE /* UILabel+Extension.swift in Sources */,
+				59974D1C20320726003D3BBE /* Constants.swift in Sources */,
+				59974D2720320726003D3BBE /* UIImage+Extension.swift in Sources */,
+				59974D1E20320726003D3BBE /* Utils.swift in Sources */,
+				59974D2220320726003D3BBE /* UIColor+Extension.swift in Sources */,
+				59974D3120320726003D3BBE /* JGCLoadingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59974CDE20320712003D3BBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59974CE720320712003D3BBE /* DornaTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59974CE920320712003D3BBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59974CF220320712003D3BBE /* DornaTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59974CE420320712003D3BBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59974CC920320712003D3BBE /* DornaTest */;
+			targetProxy = 59974CE320320712003D3BBE /* PBXContainerItemProxy */;
+		};
+		59974CEF20320712003D3BBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59974CC920320712003D3BBE /* DornaTest */;
+			targetProxy = 59974CEE20320712003D3BBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59974CCF20320712003D3BBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59974CD020320712003D3BBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59974CF420320712003D3BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59974CF520320712003D3BBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59974CF720320712003D3BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LR35SS5W3;
+				INFOPLIST_FILE = DornaTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JGC.DornaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		59974CF820320712003D3BBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LR35SS5W3;
+				INFOPLIST_FILE = DornaTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JGC.DornaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		59974CFA20320712003D3BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LR35SS5W3;
+				INFOPLIST_FILE = DornaTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JGC.DornaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DornaTest.app/DornaTest";
+			};
+			name = Debug;
+		};
+		59974CFB20320712003D3BBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LR35SS5W3;
+				INFOPLIST_FILE = DornaTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JGC.DornaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DornaTest.app/DornaTest";
+			};
+			name = Release;
+		};
+		59974CFD20320712003D3BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LR35SS5W3;
+				INFOPLIST_FILE = DornaTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JGC.DornaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DornaTest;
+			};
+			name = Debug;
+		};
+		59974CFE20320712003D3BBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LR35SS5W3;
+				INFOPLIST_FILE = DornaTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JGC.DornaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DornaTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59974CC520320712003D3BBE /* Build configuration list for PBXProject "DornaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59974CF420320712003D3BBE /* Debug */,
+				59974CF520320712003D3BBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59974CF620320712003D3BBE /* Build configuration list for PBXNativeTarget "DornaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59974CF720320712003D3BBE /* Debug */,
+				59974CF820320712003D3BBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59974CF920320712003D3BBE /* Build configuration list for PBXNativeTarget "DornaTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59974CFA20320712003D3BBE /* Debug */,
+				59974CFB20320712003D3BBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59974CFC20320712003D3BBE /* Build configuration list for PBXNativeTarget "DornaTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59974CFD20320712003D3BBE /* Debug */,
+				59974CFE20320712003D3BBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59974CDA20320712003D3BBE /* DornaTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59974CDB20320712003D3BBE /* DornaTest.xcdatamodel */,
+			);
+			currentVersion = 59974CDB20320712003D3BBE /* DornaTest.xcdatamodel */;
+			path = DornaTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 59974CC220320712003D3BBE /* Project object */;
+}
