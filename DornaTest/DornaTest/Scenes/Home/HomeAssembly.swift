@@ -29,6 +29,7 @@ class HomeAssembly: NSObject {
         interactor.router = router
         
         router.viewController = viewController
+        router.presenter = presenter
         
         return viewController
     }

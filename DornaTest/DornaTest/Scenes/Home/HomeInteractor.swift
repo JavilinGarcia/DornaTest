@@ -12,12 +12,19 @@ class HomeInteractor: NSObject {
     
     var presenter: HomePresenterProtocol!
     var router: HomeRouterProtocol!
+    var grandPrixes: [GrandPrix]?
     
+    var currentGrandPrix: GrandPrix?
 }
 
 extension HomeInteractor: HomeInteractorProtocol {
+    
     func viewIsReady() {
         
     }
     
+    func userDidTapRow(_ index: Int) {
+//        currentGrandPrix = grandPrixes?[index]
+        router.navigateToDetail()
+    }
 }

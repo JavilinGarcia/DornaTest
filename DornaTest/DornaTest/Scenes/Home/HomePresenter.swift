@@ -12,13 +12,20 @@ class HomePresenter: LibPresenter {
     
     var viewController: HomeViewControllerProtocol!
     var interactor: HomeInteractorProtocol!
-    
+    var detailViewController: HomeDetailViewController!
+
+    var listDataSource: [HomeListModel]?
+    var detailDataSource: [HomeDetailModel]?
 }
 
 extension HomePresenter: HomePresenterProtocol {
     
     func viewIsReady() {
         interactor.viewIsReady()
+    }
+    
+    func userDidTapRow(_ index: Int) {
+        interactor.userDidTapRow(index)
     }
     
     //COMMON

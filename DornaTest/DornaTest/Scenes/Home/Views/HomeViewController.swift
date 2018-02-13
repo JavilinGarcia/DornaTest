@@ -11,7 +11,9 @@ import UIKit
 class HomeViewController: LibViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var presenter: HomePresenterProtocol!
+    var dataSource: [HomeListModel]?
     
     override func viewDidLoad() {
         presenter.viewIsReady()
@@ -57,6 +59,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter.userDidTapRow(indexPath.row)
     }
 }
