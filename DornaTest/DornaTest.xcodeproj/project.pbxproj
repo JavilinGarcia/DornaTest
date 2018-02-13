@@ -47,6 +47,15 @@
 		592124A120336676000E8F7A /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1320320726003D3BBE /* NSData+Extension.swift */; };
 		592124A220336679000E8F7A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1420320726003D3BBE /* String+Extension.swift */; };
 		592124A320336679000E8F7A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1420320726003D3BBE /* String+Extension.swift */; };
+		592124A62033696C000E8F7A /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124A52033696C000E8F7A /* URLConstants.swift */; };
+		592124A72033696C000E8F7A /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124A52033696C000E8F7A /* URLConstants.swift */; };
+		592124A82033696C000E8F7A /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124A52033696C000E8F7A /* URLConstants.swift */; };
+		592124AA20336A06000E8F7A /* CommunicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124A920336A06000E8F7A /* CommunicatorManager.swift */; };
+		592124AB20336A06000E8F7A /* CommunicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124A920336A06000E8F7A /* CommunicatorManager.swift */; };
+		592124AC20336A06000E8F7A /* CommunicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124A920336A06000E8F7A /* CommunicatorManager.swift */; };
+		592124AF20336D21000E8F7A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124AE20336D21000E8F7A /* CoreDataManager.swift */; };
+		592124B020336D21000E8F7A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124AE20336D21000E8F7A /* CoreDataManager.swift */; };
+		592124B120336D21000E8F7A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124AE20336D21000E8F7A /* CoreDataManager.swift */; };
 		59711E772032331A0058B3A8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59711E752032331A0058B3A8 /* HomeViewController.xib */; };
 		59711E782032331A0058B3A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59711E762032331A0058B3A8 /* HomeViewController.swift */; };
 		59711E7B2032333A0058B3A8 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59711E792032333A0058B3A8 /* HomeDetailViewController.swift */; };
@@ -171,6 +180,9 @@
 		280A2A0A51469863FCB91C85 /* Pods_DornaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DornaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F61108ED4A9C6CE9C4DE6A4 /* Pods-DornaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DornaTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DornaTest/Pods-DornaTest.release.xcconfig"; sourceTree = "<group>"; };
 		4B4A81EA7416836CEA0D921A /* Pods_DornaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DornaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		592124A52033696C000E8F7A /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		592124A920336A06000E8F7A /* CommunicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatorManager.swift; sourceTree = "<group>"; };
+		592124AE20336D21000E8F7A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		59711E752032331A0058B3A8 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		59711E762032331A0058B3A8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		59711E792032333A0058B3A8 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +277,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592124A42033695F000E8F7A /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+				592124A52033696C000E8F7A /* URLConstants.swift */,
+				592124A920336A06000E8F7A /* CommunicatorManager.swift */,
+			);
+			path = Communications;
+			sourceTree = "<group>";
+		};
+		592124AD20336CF0000E8F7A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				592124AE20336D21000E8F7A /* CoreDataManager.swift */,
+			);
+			name = CoreData;
+			path = Utils/CoreData;
+			sourceTree = "<group>";
+		};
 		59711E742032331A0058B3A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +384,8 @@
 		59974CFF20320726003D3BBE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				592124AD20336CF0000E8F7A /* CoreData */,
+				592124A42033695F000E8F7A /* Communications */,
 				59974D0020320726003D3BBE /* Utils */,
 				59974D0820320726003D3BBE /* Extensions */,
 				59974D1520320726003D3BBE /* Lib */,
@@ -842,6 +874,7 @@
 				59974CDC20320712003D3BBE /* DornaTest.xcdatamodeld in Sources */,
 				59974D2320320726003D3BBE /* Date+Extension.swift in Sources */,
 				59974D2520320726003D3BBE /* NSOBject+Extension.swift in Sources */,
+				592124AA20336A06000E8F7A /* CommunicatorManager.swift in Sources */,
 				59974D2820320726003D3BBE /* Bundle+Extension.swift in Sources */,
 				59711E782032331A0058B3A8 /* HomeViewController.swift in Sources */,
 				59974D1D20320726003D3BBE /* DataManager.swift in Sources */,
@@ -863,12 +896,14 @@
 				59974D2620320726003D3BBE /* UIView+Extension.swift in Sources */,
 				59974D3020320726003D3BBE /* LayerView.swift in Sources */,
 				59711E8820335B6A0058B3A8 /* HomeListModel.swift in Sources */,
+				592124AF20336D21000E8F7A /* CoreDataManager.swift in Sources */,
 				59974D2420320726003D3BBE /* UILabel+Extension.swift in Sources */,
 				59711E832032351B0058B3A8 /* GrandPrix.swift in Sources */,
 				59974D1C20320726003D3BBE /* Constants.swift in Sources */,
 				59974D2720320726003D3BBE /* UIImage+Extension.swift in Sources */,
 				59974D1E20320726003D3BBE /* Utils.swift in Sources */,
 				59974D2220320726003D3BBE /* UIColor+Extension.swift in Sources */,
+				592124A62033696C000E8F7A /* URLConstants.swift in Sources */,
 				59711E8C20335B7A0058B3A8 /* HomeDetailModel.swift in Sources */,
 				59E6C62320321D3300F9F54B /* HomeListTableViewCell.swift in Sources */,
 				59974D3120320726003D3BBE /* JGCLoadingView.swift in Sources */,
@@ -879,7 +914,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592124AB20336A06000E8F7A /* CommunicatorManager.swift in Sources */,
 				592124922033665D000E8F7A /* UILabel+Extension.swift in Sources */,
+				592124A72033696C000E8F7A /* URLConstants.swift in Sources */,
 				5921247E20336338000E8F7A /* LibViewController.swift in Sources */,
 				59711E8920335B6A0058B3A8 /* HomeListModel.swift in Sources */,
 				5921249A2033666B000E8F7A /* Bundle+Extension.swift in Sources */,
@@ -898,6 +935,7 @@
 				592124902033665B000E8F7A /* Date+Extension.swift in Sources */,
 				59974E3820321104003D3BBE /* HomePresenter.swift in Sources */,
 				59711E8D20335B7A0058B3A8 /* HomeDetailModel.swift in Sources */,
+				592124B020336D21000E8F7A /* CoreDataManager.swift in Sources */,
 				592124822033633E000E8F7A /* LibProtocols.swift in Sources */,
 				5921249820336668000E8F7A /* UIImage+Extension.swift in Sources */,
 				5921249C2033666F000E8F7A /* UIScroll+Extension.swift in Sources */,
@@ -916,7 +954,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592124AC20336A06000E8F7A /* CommunicatorManager.swift in Sources */,
 				592124932033665E000E8F7A /* UILabel+Extension.swift in Sources */,
+				592124A82033696C000E8F7A /* URLConstants.swift in Sources */,
 				5921247F20336338000E8F7A /* LibViewController.swift in Sources */,
 				59711E8A20335B6A0058B3A8 /* HomeListModel.swift in Sources */,
 				5921249B2033666C000E8F7A /* Bundle+Extension.swift in Sources */,
@@ -935,6 +975,7 @@
 				592124912033665B000E8F7A /* Date+Extension.swift in Sources */,
 				59974E3920321104003D3BBE /* HomePresenter.swift in Sources */,
 				59711E8E20335B7A0058B3A8 /* HomeDetailModel.swift in Sources */,
+				592124B120336D21000E8F7A /* CoreDataManager.swift in Sources */,
 				592124832033633F000E8F7A /* LibProtocols.swift in Sources */,
 				5921249920336669000E8F7A /* UIImage+Extension.swift in Sources */,
 				5921249D20336670000E8F7A /* UIScroll+Extension.swift in Sources */,

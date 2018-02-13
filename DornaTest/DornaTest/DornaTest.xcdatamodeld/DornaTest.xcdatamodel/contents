@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GrandPrixEntity" representedClassName="GrandPrixEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="champ_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="circuit_flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_begin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_finish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="top_mobile_image_url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GrandPrixEntity" positionX="-63" positionY="-18" width="128" height="180"/>
+    </elements>
 </model>

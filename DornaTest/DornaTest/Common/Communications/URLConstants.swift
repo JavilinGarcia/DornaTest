@@ -6,8 +6,11 @@
 //  Copyright © 2018 Javier Garcia Castro. All rights reserved.
 //
 
-import UIKit
+// MARK: - Base
+public let BASE_URL = "http://staging.motogpofficialapp.motogp.com/en/motogpapp/events_list/"
 
-class URLConstants: NSObject {
+// MARK: - List URL
+public let LIST_URL = "/en/motogpapp/events_list/"
 
-}
+// MARK: - Detail URL
+public let DETAIL_URL = "/en/motogpapp/events_list/{id}"

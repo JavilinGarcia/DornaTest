@@ -20,7 +20,8 @@ class HomeInteractor: NSObject {
 extension HomeInteractor: HomeInteractorProtocol {
     
     func viewIsReady() {
-        
+        presenter.showLoading(loadingMessage: Localize(key: "loading_text"))
+        CommunicatorManager.sharedInstance.getAllGrandPrixes()
     }
     
     func userDidTapRow(_ index: Int) {
