@@ -107,7 +107,7 @@ class DataManager: NSObject {
     // MARK: - Save to local
 
     func saveGrandPrixesIntoCoreData(prixes: [GrandPrix], completion: (_ result: Bool) -> Void)  {
-        print("saveGrandPrixesIntoCoreData - Save GPs")
+        print("Save GPs")
         let managedContext = self.persistentContainer.viewContext
         
         for aGP:GrandPrix in prixes {
@@ -130,7 +130,7 @@ class DataManager: NSObject {
     }
     
     func saveGPDetailIntoCoreData(sessions: [GPSession], completion: (_ result: Bool) -> Void)  {
-        print("<#T##items: Any...##Any#>")
+        print("Save sessions")
         let managedContext = self.persistentContainer.viewContext
         
         for session: GPSession in sessions {
@@ -155,6 +155,7 @@ class DataManager: NSObject {
     // MARK: - Parse responses
     
     func parseResponse(response: DataResponse<Any>) {
+        print("Parse GPs response")
         do{
             if let aResult: NSDictionary = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                 print(aResult)
@@ -206,6 +207,7 @@ class DataManager: NSObject {
     }
     
     func parseDetailResponse(response: DataResponse<Any>) {
+        print("Parse detail response")
         do{
             if let aResult: NSDictionary = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
 

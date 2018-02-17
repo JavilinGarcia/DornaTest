@@ -10,7 +10,6 @@ import UIKit
 
 class GrandPrix {
 
-    //List
     var id: String?
     var date_begin: String?
     var date_finish: String?
@@ -23,19 +22,6 @@ class GrandPrix {
     var sessions: [GPSession]?
  
     //MARK: - Init
-    
-    init(withImageURL id: String, name: String, date_begin: String, date_finish: String, top_mobile_image_url: String, circuit_flag: UIImage) {
-        self.id = id
-        self.name = name
-        self.date_begin = date_begin
-        self.date_finish = date_finish
-        self.top_mobile_image_url = top_mobile_image_url
-        self.circuit_flag = circuit_flag
-        if let data = UIImageJPEGRepresentation(circuit_flag, 1) {
-            self.circuit_flag_data = data
-        }
-        self.sessions = [GPSession]()
-    }
     
     init(withImageData id: String, name: String, date_begin: String, date_finish: String, top_mobile_image_data: Data, circuit_flag_data: Data) {
         self.id = id

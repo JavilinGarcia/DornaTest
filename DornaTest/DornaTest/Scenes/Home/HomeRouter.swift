@@ -22,12 +22,4 @@ extension HomeRouter: HomeRouterProtocol {
         homeDetailViewController.presenter = aPresenter
         viewController.navigationController?.pushViewController(homeDetailViewController, animated: true)
     }
-    
-//    func navigateToDetail(selectedGP: GrandPrix) {
-//        let homeDetailViewController: HomeDetailViewController = HomeDetailViewController()
-//        presenter.detailViewController = homeDetailViewController
-//        homeDetailViewController.presenter = presenter
-//        homeDetailViewController.currentGP = selectedGP
-//        viewController.navigationController?.pushViewController(homeDetailViewController, animated: true)
-//    }
 }

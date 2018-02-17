@@ -8,36 +8,6 @@
 
 import UIKit
 
-extension Date{
-    
-    func generateDatesArrayBetweenTwoDates(startDate: Date , endDate:Date) ->[Date]
-    {
-        var datesArray: [Date] =  [Date]()
-        var startDate = startDate
-        let calendar = Calendar.current
-        
-        let fmt = DateFormatter()
-        fmt.dateFormat = "yyyy-MM-dd"
-        
-        while startDate <= endDate {
-            datesArray.append(startDate)
-            startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
-            
-        }
-        return datesArray
-    }
-    
-    func toStringWithFormat(format: String) -> String {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        dateFormatter.timeZone = TimeZone.current
-        let utcTimeZoneStr = dateFormatter.string(from: self)
-        
-        return utcTimeZoneStr
-    }
-}
-
 class HomePresenter: LibPresenter {
     
     var viewController: HomeViewControllerProtocol!
@@ -52,53 +22,55 @@ class HomePresenter: LibPresenter {
     
     // MARK: - Private Methods
     
-    func getDaysOfPrix(sessions: [GPSession]) -> [String] {
-        var days = [String]()
-        for sessionModel:GPSession in sessions {
-            let dateComponents = sessionModel.start_time?.components(separatedBy: "T")
-            let dateSubComponents = dateComponents?.first?.components(separatedBy: "-")
-            
-            if let day = dateSubComponents?.last {
-                if !days.contains(day) {
-                    days.append(day)
-                }
+    func prepareData(model: GrandPrix) -> [String: [HomeDetailModel]] {
+        let subStringBegin = model.date_begin!.components(separatedBy:"T").first
+        let beginDate = Date.toDate(str: subStringBegin!)
+        
+        let subStringFinish = model.date_finish!.components(separatedBy:"T").first
+        let finishDate = subStringFinish?.toDate()
+        
+        let dates = Date.generateDatesArrayBetweenTwoDates(startDate: beginDate!, endDate:finishDate!)
+        
+        var keys:[String] = [String]()
+        for date in dates {
+            if let dayKey = date.dayOfWeek() {
+                keys.append(dayKey)
             }
         }
-        days.sort()
-        return days
+        
+        var dic: Dictionary = [String: [HomeDetailModel]]()
+        if keys.count > 0 {
+            for key in keys { // e.g.: VIernes 20
+                dic[key] = getModelsForDay(datesOfGP: dates, sessions: model.sessions!, day: key)
+            }
+        }
+        
+        return dic
     }
     
-    func getModelsForDay(sessions: [GPSession], day: String) -> [HomeDetailModel] {
+    //Return array of HomeDetailModel for a expecific day
+    func getModelsForDay(datesOfGP: [Date], sessions: [GPSession], day: String) -> [HomeDetailModel] {
         var sessionsForDay: [HomeDetailModel] = [HomeDetailModel]()
         
         for sessionModel:GPSession in sessions {
-            let startDateComponents = sessionModel.start_time?.components(separatedBy: "T")
-            let endDateComponents = sessionModel.end_time?.components(separatedBy: "T")
             
             var startString = ""
             var endString = ""
             
-            if let date = startDateComponents?.first {
-                let dateComponents = date.components(separatedBy: "-")
-                if let sDay = dateComponents.last {
-                    if sDay == day {
-                        if let startTime = startDateComponents?.last {
-                            let timeComponents = startTime.components(separatedBy: ":")
-                            startString = "\(timeComponents[0]):\(timeComponents[1])"
-                        }
-                        
-                        if let endTime = endDateComponents?.last {
-                            let timeComponents = endTime.components(separatedBy: ":")
-                            endString = "\(timeComponents[0]):\(timeComponents[1])"
-                        }
-                        
-                        let detailModel: HomeDetailModel = HomeDetailModel(start_time: startString, end_time: endString, champ_name: sessionModel.champ_name!, name: sessionModel.name!)
-                        sessionsForDay.append(detailModel)
-                    }
-                }
+            let startTime = Date.toDate(str: sessionModel.start_time!, "yyy-MM-dd'T'HH:mm:ssZ")
+            let endTime = Date.toDate(str: sessionModel.end_time!, "yyy-MM-dd'T'HH:mm:ssZ")
+
+            if startTime!.dayOfWeek() == day {
+                
+                startString = startTime!.timeToString()
+                endString = endTime!.timeToString()
+                
+                let detailModel: HomeDetailModel = HomeDetailModel(start_time: startString, end_time: endString, champ_name: sessionModel.champ_name!, name: sessionModel.name!)
+                sessionsForDay.append(detailModel)
             }
         }
         
+        //Sort sessions
         if sessionsForDay.count > 0 {
             sessionsForDay.sort(by: { (first: HomeDetailModel, second: HomeDetailModel) -> Bool in
                 return first.start_time!.compare(second.start_time!) == .orderedAscending
@@ -106,19 +78,6 @@ class HomePresenter: LibPresenter {
         }
         
         return sessionsForDay
-    }
-    
-    func getDateFromString(dateString: String) -> Date {
-        // 2016-06-06 00:24:21+00:00
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"
-        dateFormatter.calendar = Calendar(identifier: .iso8601)
-        dateFormatter.timeZone = TimeZone.autoupdatingCurrent
-        dateFormatter.locale = Locale.autoupdatingCurrent
-        
-        let date = dateFormatter.date(from: dateString)!
-        
-        return date
     }
 }
 
@@ -139,100 +98,67 @@ extension HomePresenter: HomePresenterProtocol {
         interactor.userDidTapRow(index)
     }
     
+    // MARK: - Reload data
+    
     func reloadData(models: [GrandPrix]) {
         
         listDataSource = [HomeListModel]()
         
         for model:GrandPrix in models {
-
-            let beginDate = getDateFromString(dateString: model.date_begin!)
-            let finishDate = getDateFromString(dateString: model.date_finish!)
-
+            
+            let subStringBegin = model.date_begin!.components(separatedBy:"T").first
+            let beginDate = subStringBegin?.toDate()
+            
+            let subStringFinish = model.date_finish!.components(separatedBy:"T").first
+            let finishDate = subStringFinish?.toDate()
+            
             let formatter = DateFormatter()
             formatter.timeZone = TimeZone.init(identifier: "ZZZZ")
             formatter.dateFormat = "dd-MMM"
             formatter.timeZone = TimeZone.autoupdatingCurrent
             
-            let beginString = formatter.string(from: beginDate)
-            let finishString = formatter.string(from: finishDate).components(separatedBy: "-").first
-            
             formatter.dateFormat = "MMM"
-            let monthString = formatter.string(from: finishDate).capitalized
+            let monthString = formatter.string(from: finishDate!).capitalized
             
-            
-            
-            
-//            let dateFormatter = DateFormatter()
-//            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
-//            dateFormatter.calendar = Calendar.current
-//            dateFormatter.locale = Locale.current
-            
-//            let startDate = Date.fromUTCToLocalDate(stringDate: model.date_begin!)
-//
-//            let dBegin = dateFormatter.date(from: model.date_begin!)
-//            let sBegin = dBegin?.toStringWithFormat(format: "dd:MMM")
-//            let dayBegin = sBegin?.components(separatedBy: ":").first
-//
-//            let dFinish = dateFormatter.date(from: model.date_finish!)
-//            let sFinish = dFinish?.toStringWithFormat(format: "dd:MMM")
-//            let dayFinish = sBegin?.components(separatedBy: ":").first
-//
-//            let month = sBegin?.components(separatedBy: ":").last?.capitalized
-//
-//
-            let dates = Date().generateDatesArrayBetweenTwoDates(startDate: beginDate, endDate:finishDate)
+            let dates = Date.generateDatesArrayBetweenTwoDates(startDate: beginDate!, endDate:finishDate!)
             var dateStrArray: [String] = [String]()
 
             for date in dates {
                 dateStrArray.append(date.toStringWithFormat(format: "dd"))
             }
 
-            let finalStr = dateStrArray.joined(separator: "/") + " \(monthString)"
+            let finalStr = dateStrArray.joined(separator: "/") + " \(monthString)" // -> dd/dd/dd MMM
 
-            let listModel: HomeListModel = HomeListModel(id: model.id!, day_begin: finishString!, month_begin: monthString, allDays: finalStr, name: model.name!, backgroundImage: model.top_mobile_image!, circuit_flag: model.circuit_flag!)
+            let dayToShow = (model.name?.uppercased().contains("TEST"))! ? beginDate?.dayToString() : finishDate?.dayToString()
+            
+            let listModel: HomeListModel = HomeListModel(id: model.id!, day_begin: dayToShow!, month_begin: monthString, allDays: finalStr, name: model.name!, backgroundImage: model.top_mobile_image!, circuit_flag: model.circuit_flag!)
 
             listDataSource?.append(listModel)
         }
+        
         (viewController as! UIViewController).navigationController?.setNavigationBarHidden(false, animated: false)
 
         viewController.reloadData(listModel: listDataSource!)
     }
     
+    // MARK: - Reload detail data
+    
     func reloadDetail(model: GrandPrix) {
         
         let headerModel: HomeListModel = listDataSource![indexSelected!]
         
-        detailDataSource = [(key: String, value:[HomeDetailModel])]()
+        detailDataSource = nil
         
-        let days: [String] = getDaysOfPrix(sessions: model.sessions!)
+        let dic: Dictionary = prepareData(model: model)
+        // Sort by day
+        detailDataSource = dic.sorted(by: { (first: (key: String, value:[HomeDetailModel]), second: (key: String, value:[HomeDetailModel])) -> Bool in
+            return first.key.components(separatedBy: " ").last!.compare(second.key.components(separatedBy: " ").last!) == .orderedAscending
+        })
         
-        var dic: Dictionary = [String: [HomeDetailModel]]()
-        
-        for i in 0 ..< days.count {
-            let day = days[i]
-            switch (i) {
-            case 0:
-                dic["Viernes \(day)"] = getModelsForDay(sessions: model.sessions!, day: day)
-                break
-            case 1:
-                dic["Sabado \(day)"] = getModelsForDay(sessions: model.sessions!, day: day)
-                break
-            case 2:
-                dic["Domingo \(day)"] = getModelsForDay(sessions: model.sessions!, day: day)
-                break
-            default:
-                break
-            }
-        }
-
-        let array: [(key: String, value:[HomeDetailModel])] = dic.sorted(by: { $0.0 > $1.0 })
-        
-        detailDataSource = array
-       
         detailViewController?.reloadData(headerModel: headerModel, detailModel: detailDataSource!)
     }
     
-    //COMMON
+    // MARK: - Common
     
     func showLoading(loadingMessage: String) {
         super.showLoading(loadingMessage: loadingMessage, viewController: viewController)
@@ -251,7 +177,7 @@ extension HomePresenter: HomePresenterProtocol {
     }
     
     func showAlertWithTitle(title: String, message: String) {
-        viewController.showAlertWithTitle(title: title, message: message)
+        super.showAlertWithTitle(title: title, message: message, viewController: viewController)
     }
     
 }

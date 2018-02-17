@@ -39,7 +39,6 @@ extension HomeInteractor: GrandPrixesDelegate {
     
     func didGetAllGrandPrixes(prixes: [GrandPrix]) {
         presenter.dismissLoading()
-
         if prixes.count == 0 {
             presenter.showAlertWithTitle(title: Localize(key: "error_title"), message: Localize(key: "error_default_msg"))
         }
@@ -50,7 +49,6 @@ extension HomeInteractor: GrandPrixesDelegate {
     }
     
     func didGetGrandPrixDetail(gpSessions: [GPSession]) {
-        
         
         if gpSessions.count == 0 {
             presenter.dismissLoading()

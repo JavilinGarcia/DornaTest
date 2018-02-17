@@ -129,6 +129,9 @@
 		59974E772032156E003D3BBE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */; };
 		59974E782032156E003D3BBE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */; };
 		59974E792032156E003D3BBE /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */; };
+		59C7E6ED2038796900AAD75D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7E6EC2038796900AAD75D /* Date+Extension.swift */; };
+		59C7E6EE2038796900AAD75D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7E6EC2038796900AAD75D /* Date+Extension.swift */; };
+		59C7E6EF2038796900AAD75D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C7E6EC2038796900AAD75D /* Date+Extension.swift */; };
 		59E6C62320321D3300F9F54B /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */; };
 		59E6C62420321D3300F9F54B /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */; };
 		59E6C62520321D3300F9F54B /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */; };
@@ -212,6 +215,7 @@
 		59974E562032156E003D3BBE /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		59974E572032156E003D3BBE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		59974E582032156E003D3BBE /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		59C7E6EC2038796900AAD75D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		59E6C62120321D3300F9F54B /* HomeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListTableViewCell.swift; sourceTree = "<group>"; };
 		59E6C62220321D3300F9F54B /* HomeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListTableViewCell.xib; sourceTree = "<group>"; };
 		740078528883E363CC925ED6 /* Pods-DornaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DornaTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DornaTestUITests/Pods-DornaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 				59974D0E20320726003D3BBE /* UIView+Extension.swift */,
 				59974D1220320726003D3BBE /* NSDictionary+Extension.swift */,
 				59974D1420320726003D3BBE /* String+Extension.swift */,
+				59C7E6EC2038796900AAD75D /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				59974E4020321104003D3BBE /* HomeProtocols.swift in Sources */,
 				59974E3A20321104003D3BBE /* HomeRouter.swift in Sources */,
 				59974D2A20320726003D3BBE /* NSDictionary+Extension.swift in Sources */,
+				59C7E6ED2038796900AAD75D /* Date+Extension.swift in Sources */,
 				59711E7B2032333A0058B3A8 /* HomeDetailViewController.swift in Sources */,
 				59974E3720321104003D3BBE /* HomePresenter.swift in Sources */,
 				59974D2620320726003D3BBE /* UIView+Extension.swift in Sources */,
@@ -863,6 +869,7 @@
 				59974CE720320712003D3BBE /* DornaTestTests.swift in Sources */,
 				59974E4120321104003D3BBE /* HomeProtocols.swift in Sources */,
 				592124842033636B000E8F7A /* HomeViewController.swift in Sources */,
+				59C7E6EE2038796900AAD75D /* Date+Extension.swift in Sources */,
 				59974E3B20321104003D3BBE /* HomeRouter.swift in Sources */,
 				5921248A2033664F000E8F7A /* DataManager.swift in Sources */,
 				5921249E20336673000E8F7A /* NSDictionary+Extension.swift in Sources */,
@@ -896,6 +903,7 @@
 				59974CF220320712003D3BBE /* DornaTestUITests.swift in Sources */,
 				59974E4220321104003D3BBE /* HomeProtocols.swift in Sources */,
 				592124852033636C000E8F7A /* HomeViewController.swift in Sources */,
+				59C7E6EF2038796900AAD75D /* Date+Extension.swift in Sources */,
 				59974E3C20321104003D3BBE /* HomeRouter.swift in Sources */,
 				5921248B2033664F000E8F7A /* DataManager.swift in Sources */,
 				5921249F20336673000E8F7A /* NSDictionary+Extension.swift in Sources */,

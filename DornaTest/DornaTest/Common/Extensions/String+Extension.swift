@@ -1,5 +1,5 @@
 //
-//  Common
+//  String+Extension
 //  DornaTest
 //
 // Created by Javier Garcia Castro on 12/2/18. 
@@ -30,5 +30,17 @@ extension String {
         } catch {
             return [String]()
         }
+    }
+    
+    func toDate() -> Date?
+    {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        if let date: Date = dateFormatter.date(from: self) {
+            return date
+        }
+
+        return nil
     }
 }

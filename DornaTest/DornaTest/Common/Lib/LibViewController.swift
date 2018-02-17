@@ -1,5 +1,5 @@
 //
-//  Common
+//  LibViewcontroller
 //  DornaTest
 //
 // Created by Javier Garcia Castro on 12/2/18. 
@@ -38,8 +38,8 @@ extension LibViewController: LibViewControllerProtocol {
     }
     
     func dismissLoading() {
-        dismiss(animated: true, completion: nil)
         self.loadingView = nil
+        dismiss(animated: true, completion: nil)
     }
     
     func dismissLoadingWithCompletion(animated: Bool?, completion: @escaping() -> ()) {
@@ -57,6 +57,13 @@ extension LibViewController: LibViewControllerProtocol {
                 self.alertController!.addAction(okAction)
                 self.present(self.alertController!, animated: true, completion: nil)
             })
+        }
+        else {
+            self.alertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+            let okAction = UIAlertAction.init(title: "Ok", style: .default, handler: nil)
+            
+            self.alertController!.addAction(okAction)
+            self.present(self.alertController!, animated: true, completion: nil)
         }
     }
     

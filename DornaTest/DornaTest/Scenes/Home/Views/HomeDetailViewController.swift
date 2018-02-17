@@ -96,7 +96,7 @@ extension HomeDetailViewController: UITableViewDelegate, UITableViewDataSource {
 
         let model: HomeDetailModel = dic.value[indexPath.row] as HomeDetailModel
 
-        cell.timeLabel.text = "\(model.start_time!) - \(model.end_time!)"
+        cell.timeLabel.text = (model.start_time == model.end_time) ? "\(model.start_time!)" : "\(model.start_time!) - \(model.end_time!)" 
         cell.prixLabel.text = model.champ_name
         cell.satatePrixLabel.text = model.name
         
