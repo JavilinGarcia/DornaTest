@@ -10,10 +10,15 @@ import UIKit
 
 class HomeViewController: LibViewController {
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var presenter: HomePresenterProtocol!
-    var dataSource: [HomeListModel]?
+
+    var dataSource: [HomeListModel] = [HomeListModel]()
+    
+    // MARK: - Private Methods
     
     override func viewDidLoad() {
         presenter.viewIsReady()
@@ -37,6 +42,16 @@ class HomeViewController: LibViewController {
 
 extension HomeViewController: HomeViewControllerProtocol {
     
+    func reloadData(listModel: [HomeListModel]) {
+        dataSource = listModel
+        tableView.reloadData()
+        
+        UIView.animate(withDuration: 1.5) {
+            self.backgroundImageView.alpha = 0
+            self.tableView.alpha = 1
+            self.nameLabel.textColor = .black
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -44,7 +59,7 @@ extension HomeViewController: HomeViewControllerProtocol {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -54,6 +69,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: HomeListTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: HomeListTableViewCell.getCellIdentifier()) as! HomeListTableViewCell
+        let model: HomeListModel = dataSource[indexPath.row] as HomeListModel
+        
+        cell.gpNameLabel.text = model.name
+        cell.gpDayLabel.text = model.day_begin
+        cell.gpMonthLabel.text = model.month_begin
+        cell.gpFlagImageView.image = model.circuit_flag
+        cell.gpBackgroundImage.image = model.backgroundImage
         
         return cell
     }

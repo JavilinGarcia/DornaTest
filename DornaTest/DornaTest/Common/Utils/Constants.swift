@@ -1,5 +1,5 @@
 //
-//  Common
+//  Constants
 //  DornaTest
 //
 //  Created by Javier Garcia Castro on 12/2/18.
@@ -36,5 +36,6 @@ public let kMediumGrayColor = 0x343434
 public let kUltraLightGrayColor = 0xD3D3D3
 public let kBlackColor = 0x000000
 public let kWhiteColor = 0xffffff
+
 
 

@@ -18,6 +18,11 @@ class LibPresenter: NSObject {
         viewController.dismissLoading()
     }
     
+    func dismissLoadingWithCompletion(viewController: LibViewControllerProtocol!, completion: @escaping() -> ()) {
+        viewController.dismissLoadingWithCompletion(animated: true, completion: completion)
+    }
+
+    
     func showAlertWithTitle(title: String, message: String, viewController: LibViewControllerProtocol!) {
         viewController.showAlertWithTitle(title: title, message: message)
     }

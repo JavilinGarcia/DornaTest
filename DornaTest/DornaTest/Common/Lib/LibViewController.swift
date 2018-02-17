@@ -24,7 +24,6 @@ class LibViewController: UIViewController {
 }
 
 extension LibViewController: LibViewControllerProtocol {
-    
     func showLoading(loadingMessage: String) {
         
         loadingView = UIAlertController(title: nil, message: loadingMessage, preferredStyle: .alert)
@@ -40,7 +39,13 @@ extension LibViewController: LibViewControllerProtocol {
     
     func dismissLoading() {
         dismiss(animated: true, completion: nil)
-        loadingView = nil
+        self.loadingView = nil
+    }
+    
+    func dismissLoadingWithCompletion(animated: Bool?, completion: @escaping() -> ()) {
+        super.dismiss(animated: animated ?? true) {
+            completion()
+        }
     }
     
     func showAlertWithTitle(title: String, message: String) {

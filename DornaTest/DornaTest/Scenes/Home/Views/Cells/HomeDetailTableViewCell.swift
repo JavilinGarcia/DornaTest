@@ -1,17 +1,19 @@
 //
-//  HomeListTableViewCell.swift
+//  HomeDetailTableViewCell.swift
 //  DornaTest
 //
-//  Created by Javier Garcia Castro on 12/2/18.
+//  Created by Javier Garcia Castro on 17/2/18.
 //  Copyright © 2018 Javier Garcia Castro. All rights reserved.
 //
 
 import UIKit
 
-public let cellId = "HomeListTableViewCellIdentifier"
+class HomeDetailTableViewCell: UITableViewCell {
 
-class HomeListTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var prixLabel: UILabel!
+    @IBOutlet weak var satatePrixLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,14 +21,15 @@ class HomeListTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
-
+    
     class func getHeight() -> CGFloat {
-        return 100.0
+        return 60.0
     }
     
     class func getCellIdentifier() -> String {
-        return cellId
+        return "HomeDetailTableViewCellIdentifier"
     }
 }

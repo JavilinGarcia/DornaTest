@@ -9,6 +9,7 @@
 import Foundation
 
 public let kDateFormat:String = "yyyy-MM-dd'T'HH:mm:ssZ"
+public let kDateFormatZZZZ:String = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
 
 public extension Date {
     
@@ -527,7 +528,7 @@ public extension Date {
         return calendar
     }
     
-    static func fromUTCToLocalDate(stringDate: String, _format:String=kDateFormat) -> Date {
+    static func fromUTCToLocalDate(stringDate: String, _format:String=kDateFormatZZZZ) -> Date {
         
         let date = Date.toDateWithFormat(dateString: stringDate, format: _format)
         
@@ -581,6 +582,7 @@ public extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format //Your date format
 //        dateFormatter.timeZone = TimeZone(identifier: "UTC")!
+        dateFormatter.locale = Locale.current
         let date = dateFormatter.date(from: dateString) //according to date format your date string
                 
         return date!
@@ -661,5 +663,23 @@ public extension Date {
     func toStringFromComponents() -> String {
         let str = String.init(format: "%d-%d-%d", self.year, self.month, self.day)
         return str
+    }
+    
+    func generateDatesArrayBetweenTwoDates(startDate: Date , endDate:Date) -> [Date]
+    {
+        var datesArray: [Date] =  [Date]()
+        var startDate = startDate
+        let calendar = Calendar.current
+        
+        let fmt = DateFormatter()
+        fmt.dateFormat = kDateFormatZZZZ
+        
+        
+        while startDate <= endDate {
+            datesArray.append(startDate)
+            startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+            
+        }
+        return datesArray
     }
 }

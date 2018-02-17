@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GrandPrix: Codable {
+class GrandPrix {
 
     //List
     var id: String?
@@ -16,41 +16,38 @@ class GrandPrix: Codable {
     var date_finish: String?
     var name: String?
     var top_mobile_image_url: String?
+    var top_mobile_image_data: Data?
+    var top_mobile_image: UIImage?
     var circuit_flag: UIImage?
-    
-    //Detail
-    var start_time: String?
-    var end_time: String?
-    var champ_name: String?
+    var circuit_flag_data: Data?
+    var sessions: [GPSession]?
  
     //MARK: - Init
     
-    init(id: String, name: String, date_begin: String, date_finish: String, top_mobile_image_url: String, circuit_flag: UIImage, start_time: String, end_time: String, champ_name: String) {
+    init(withImageURL id: String, name: String, date_begin: String, date_finish: String, top_mobile_image_url: String, circuit_flag: UIImage) {
         self.id = id
         self.name = name
         self.date_begin = date_begin
         self.date_finish = date_finish
         self.top_mobile_image_url = top_mobile_image_url
         self.circuit_flag = circuit_flag
-        self.start_time = start_time
-        self.end_time = end_time
-        self.champ_name = champ_name
+        if let data = UIImageJPEGRepresentation(circuit_flag, 1) {
+            self.circuit_flag_data = data
+        }
+        self.sessions = [GPSession]()
     }
     
-    /*
-     
-     if let jsonData = jsonString.data(using: .utf8)
-     {
-     let photoObject = try? JSONDecoder().decode(Photo.self, from: jsonData)
-     }
-     
-     */
+    init(withImageData id: String, name: String, date_begin: String, date_finish: String, top_mobile_image_data: Data, circuit_flag_data: Data) {
+        self.id = id
+        self.name = name
+        self.date_begin = date_begin
+        self.date_finish = date_finish
+        self.top_mobile_image_data = top_mobile_image_data
+        self.top_mobile_image = UIImage(data: top_mobile_image_data)
+        self.circuit_flag_data = circuit_flag_data
+        self.circuit_flag = UIImage(data: circuit_flag_data)
+        
+        self.sessions = [GPSession]()
+    }
     
-    func encode(to encoder: Encoder) throws {
-        
-    }
-
-    required init(from decoder: Decoder) throws {
-        
-    }
 }

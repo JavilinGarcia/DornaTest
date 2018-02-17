@@ -17,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DornaTest" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImageView" destination="gCW-33-nFP" id="Bq6-99-EGd"/>
+                <outlet property="nameLabel" destination="GJa-dE-7gk" id="1Qt-ef-13S"/>
                 <outlet property="tableView" destination="evU-IS-WJY" id="5GZ-wT-nKU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="k0I-c1-AmI"/>
             </connections>
@@ -26,7 +28,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="evU-IS-WJY">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="montmelo3" translatesAutoresizingMaskIntoConstraints="NO" id="gCW-33-nFP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                </imageView>
+                <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="evU-IS-WJY">
                     <rect key="frame" x="0.0" y="44" width="375" height="704"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,21 +50,28 @@
                         <constraint firstAttribute="height" constant="30" id="NzI-fV-7QY"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="15"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="GJa-dE-7gk" firstAttribute="top" secondItem="evU-IS-WJY" secondAttribute="bottom" id="7S2-vC-5nB"/>
+                <constraint firstItem="HZh-D6-Znn" firstAttribute="trailing" secondItem="gCW-33-nFP" secondAttribute="trailing" id="9yb-Ht-tn9"/>
                 <constraint firstItem="evU-IS-WJY" firstAttribute="top" secondItem="HZh-D6-Znn" secondAttribute="top" id="Arj-CF-xfk"/>
+                <constraint firstItem="gCW-33-nFP" firstAttribute="leading" secondItem="HZh-D6-Znn" secondAttribute="leading" id="FCS-M2-J8R"/>
                 <constraint firstAttribute="trailing" secondItem="GJa-dE-7gk" secondAttribute="trailing" id="Fcg-eh-xrP"/>
                 <constraint firstItem="GJa-dE-7gk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LHd-aD-MNQ"/>
+                <constraint firstItem="gCW-33-nFP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bsi-Lg-lEq"/>
                 <constraint firstAttribute="trailing" secondItem="evU-IS-WJY" secondAttribute="trailing" id="gUD-9R-Zp4"/>
                 <constraint firstItem="HZh-D6-Znn" firstAttribute="bottom" secondItem="GJa-dE-7gk" secondAttribute="bottom" id="ilB-CP-afk"/>
+                <constraint firstAttribute="bottom" secondItem="gCW-33-nFP" secondAttribute="bottom" id="n5g-I0-MgY"/>
                 <constraint firstItem="evU-IS-WJY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="who-9d-U86"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="HZh-D6-Znn"/>
         </view>
     </objects>
+    <resources>
+        <image name="montmelo3" width="1080" height="1920"/>
+    </resources>
 </document>

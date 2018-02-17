@@ -22,6 +22,7 @@
 "error_generic" = "Error desconocido";
 "error_no_internet" = "No hay conexión.";
 "error_server_down" = "No se ha podido establecer conexión con el servidor. Inténtelo de nuevo mas tarde.";
+"error_default_msg" = "Ha ocurrido un error.";
 
 //MARK: - Titles
 "home_title" = "Grandes premios";

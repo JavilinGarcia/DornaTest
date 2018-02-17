@@ -11,20 +11,22 @@ import UIKit
 struct HomeListModel {
 
     var id: String?
-    var date_begin: String?
-    var date_finish: String?
+    var day_begin: String?
+    var month_begin: String?
+    var allDays: String?
     var name: String?
-    var top_mobile_image_url: String?
+    var backgroundImage: UIImage?
     var circuit_flag: UIImage?
     
     //MARK: - Init
-    init(id: String, date_begin: String, date_finish: String, name: String, top_mobile_image_url: String, circuit_flag: UIImage) {
+    init(id: String, day_begin: String, month_begin: String, allDays: String, name: String, backgroundImage: UIImage, circuit_flag: UIImage) {
         self.id = id
-        self.date_begin = date_begin
-        self.date_finish = date_finish
+        self.day_begin = day_begin
+        self.month_begin = month_begin
+        self.allDays = allDays
         self.name = name
-        self.top_mobile_image_url = top_mobile_image_url
         self.circuit_flag = circuit_flag
+        
+        self.backgroundImage = backgroundImage
     }
-    
 }
