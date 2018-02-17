@@ -26,7 +26,6 @@ struct HomeListModel {
         self.allDays = allDays
         self.name = name
         self.circuit_flag = circuit_flag
-        
         self.backgroundImage = backgroundImage
     }
 }

@@ -24,7 +24,7 @@ class DataManager: NSObject {
     // MARK: - Get from local
     
     func getFromLocal(completion: (_ results: [GrandPrix]) -> Void) {
-        
+        print("Fech GPs from local")
         var gps:[GrandPrix] = [GrandPrix]()
         
         let managedContext = self.persistentContainer.viewContext
@@ -65,7 +65,7 @@ class DataManager: NSObject {
     }
     
     func getDetailFromLocal(id: String, completion: (_ results: [GPSession]) -> Void) {
-        
+        print("Fech sessions from local")
         let managedContext = self.persistentContainer.viewContext
 
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "GPSessionEntity")
@@ -107,7 +107,7 @@ class DataManager: NSObject {
     // MARK: - Save to local
 
     func saveGrandPrixesIntoCoreData(prixes: [GrandPrix], completion: (_ result: Bool) -> Void)  {
-        
+        print("saveGrandPrixesIntoCoreData - Save GPs")
         let managedContext = self.persistentContainer.viewContext
         
         for aGP:GrandPrix in prixes {
@@ -130,7 +130,7 @@ class DataManager: NSObject {
     }
     
     func saveGPDetailIntoCoreData(sessions: [GPSession], completion: (_ result: Bool) -> Void)  {
-        
+        print("<#T##items: Any...##Any#>")
         let managedContext = self.persistentContainer.viewContext
         
         for session: GPSession in sessions {

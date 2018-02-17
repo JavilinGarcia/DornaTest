@@ -43,6 +43,9 @@ class HomeViewController: LibViewController {
 extension HomeViewController: HomeViewControllerProtocol {
     
     func reloadData(listModel: [HomeListModel]) {
+        
+//        self.navigationController?.setNavigationBarHidden(false, animated: false)
+
         dataSource = listModel
         tableView.reloadData()
         

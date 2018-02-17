@@ -7,6 +7,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="start_time" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="prix" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GrandPrixEntity" inverseName="sessions" inverseEntity="GrandPrixEntity" syncable="YES"/>
     </entity>
     <entity name="GrandPrixEntity" representedClassName="GrandPrixEntity" syncable="YES" codeGenerationType="class">
         <attribute name="champ_name" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,9 +19,10 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="start_time" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="top_mobile_image_data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GPSessionEntity" inverseName="prix" inverseEntity="GPSessionEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GrandPrixEntity" positionX="-63" positionY="-18" width="128" height="178"/>
-        <element name="GPSessionEntity" positionX="252" positionY="38" width="128" height="133"/>
+        <element name="GPSessionEntity" positionX="144" positionY="59" width="128" height="148"/>
+        <element name="GrandPrixEntity" positionX="-63" positionY="-18" width="128" height="193"/>
     </elements>
 </model>

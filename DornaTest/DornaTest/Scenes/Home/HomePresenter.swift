@@ -8,6 +8,36 @@
 
 import UIKit
 
+extension Date{
+    
+    func generateDatesArrayBetweenTwoDates(startDate: Date , endDate:Date) ->[Date]
+    {
+        var datesArray: [Date] =  [Date]()
+        var startDate = startDate
+        let calendar = Calendar.current
+        
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd"
+        
+        while startDate <= endDate {
+            datesArray.append(startDate)
+            startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+            
+        }
+        return datesArray
+    }
+    
+    func toStringWithFormat(format: String) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = TimeZone.current
+        let utcTimeZoneStr = dateFormatter.string(from: self)
+        
+        return utcTimeZoneStr
+    }
+}
+
 class HomePresenter: LibPresenter {
     
     var viewController: HomeViewControllerProtocol!
@@ -77,12 +107,26 @@ class HomePresenter: LibPresenter {
         
         return sessionsForDay
     }
+    
+    func getDateFromString(dateString: String) -> Date {
+        // 2016-06-06 00:24:21+00:00
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"
+        dateFormatter.calendar = Calendar(identifier: .iso8601)
+        dateFormatter.timeZone = TimeZone.autoupdatingCurrent
+        dateFormatter.locale = Locale.autoupdatingCurrent
+        
+        let date = dateFormatter.date(from: dateString)!
+        
+        return date
+    }
 }
 
 extension HomePresenter: HomePresenterProtocol {
 
     func viewIsReady() {
         if detailViewController == nil {
+            (viewController as! UIViewController).navigationController?.setNavigationBarHidden(true, animated: false)
             interactor.viewIsReady()
         }
         else {
@@ -100,39 +144,57 @@ extension HomePresenter: HomePresenterProtocol {
         listDataSource = [HomeListModel]()
         
         for model:GrandPrix in models {
+
+            let beginDate = getDateFromString(dateString: model.date_begin!)
+            let finishDate = getDateFromString(dateString: model.date_finish!)
+
+            let formatter = DateFormatter()
+            formatter.timeZone = TimeZone.init(identifier: "ZZZZ")
+            formatter.dateFormat = "dd-MMM"
+            formatter.timeZone = TimeZone.autoupdatingCurrent
             
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
-            dateFormatter.calendar = Calendar.current
-            dateFormatter.locale = Locale.current
+            let beginString = formatter.string(from: beginDate)
+            let finishString = formatter.string(from: finishDate).components(separatedBy: "-").first
             
-            let startDate = Date.fromUTCToLocalDate(stringDate: model.date_begin!)
-            
-            let dBegin = dateFormatter.date(from: model.date_begin!)
-            let sBegin = dBegin?.toStringWithFormat(format: "dd:MMM")
-            let dayBegin = sBegin?.components(separatedBy: ":").first
-            
-            let dFinish = dateFormatter.date(from: model.date_finish!)
-            let sFinish = dFinish?.toStringWithFormat(format: "dd:MMM")
-            let dayFinish = sBegin?.components(separatedBy: ":").first
-            
-            let month = sBegin?.components(separatedBy: ":").last?.capitalized
+            formatter.dateFormat = "MMM"
+            let monthString = formatter.string(from: finishDate).capitalized
             
             
-            let dates = Date().generateDatesArrayBetweenTwoDates(startDate: dBegin! , endDate:dFinish!)
+            
+            
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
+//            dateFormatter.calendar = Calendar.current
+//            dateFormatter.locale = Locale.current
+            
+//            let startDate = Date.fromUTCToLocalDate(stringDate: model.date_begin!)
+//
+//            let dBegin = dateFormatter.date(from: model.date_begin!)
+//            let sBegin = dBegin?.toStringWithFormat(format: "dd:MMM")
+//            let dayBegin = sBegin?.components(separatedBy: ":").first
+//
+//            let dFinish = dateFormatter.date(from: model.date_finish!)
+//            let sFinish = dFinish?.toStringWithFormat(format: "dd:MMM")
+//            let dayFinish = sBegin?.components(separatedBy: ":").first
+//
+//            let month = sBegin?.components(separatedBy: ":").last?.capitalized
+//
+//
+            let dates = Date().generateDatesArrayBetweenTwoDates(startDate: beginDate, endDate:finishDate)
             var dateStrArray: [String] = [String]()
-            let monthStr = dates.first?.toStringWithFormat(format: "MMM")
+
             for date in dates {
                 dateStrArray.append(date.toStringWithFormat(format: "dd"))
             }
-            
-            let finalStr = dateStrArray.joined(separator: "/") + " \(monthStr!)"
 
-            let listModel: HomeListModel = HomeListModel(id: model.id!, day_begin: dayFinish!, month_begin: month!, allDays: finalStr, name: model.name!, backgroundImage: model.top_mobile_image!, circuit_flag: model.circuit_flag!)
-            print("homelistmodel - \(listModel.name!)")
+            let finalStr = dateStrArray.joined(separator: "/") + " \(monthString)"
+
+            let listModel: HomeListModel = HomeListModel(id: model.id!, day_begin: finishString!, month_begin: monthString, allDays: finalStr, name: model.name!, backgroundImage: model.top_mobile_image!, circuit_flag: model.circuit_flag!)
+
             listDataSource?.append(listModel)
         }
-        
+        (viewController as! UIViewController).navigationController?.setNavigationBarHidden(false, animated: false)
+
         viewController.reloadData(listModel: listDataSource!)
     }
     

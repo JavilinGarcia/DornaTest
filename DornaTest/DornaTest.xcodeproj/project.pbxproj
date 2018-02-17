@@ -23,28 +23,12 @@
 		592124892033664B000E8F7A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0420320726003D3BBE /* Utils.swift */; };
 		5921248A2033664F000E8F7A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0320320726003D3BBE /* DataManager.swift */; };
 		5921248B2033664F000E8F7A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0320320726003D3BBE /* DataManager.swift */; };
-		5921248C20336655000E8F7A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0920320726003D3BBE /* UIImageView+Extension.swift */; };
-		5921248D20336655000E8F7A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0920320726003D3BBE /* UIImageView+Extension.swift */; };
 		5921248E20336658000E8F7A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0A20320726003D3BBE /* UIColor+Extension.swift */; };
 		5921248F20336658000E8F7A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0A20320726003D3BBE /* UIColor+Extension.swift */; };
-		592124902033665B000E8F7A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0B20320726003D3BBE /* Date+Extension.swift */; };
-		592124912033665B000E8F7A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0B20320726003D3BBE /* Date+Extension.swift */; };
-		592124922033665D000E8F7A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0C20320726003D3BBE /* UILabel+Extension.swift */; };
-		592124932033665E000E8F7A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0C20320726003D3BBE /* UILabel+Extension.swift */; };
-		5921249420336662000E8F7A /* NSOBject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0D20320726003D3BBE /* NSOBject+Extension.swift */; };
-		5921249520336662000E8F7A /* NSOBject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0D20320726003D3BBE /* NSOBject+Extension.swift */; };
 		5921249620336665000E8F7A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0E20320726003D3BBE /* UIView+Extension.swift */; };
 		5921249720336666000E8F7A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0E20320726003D3BBE /* UIView+Extension.swift */; };
-		5921249820336668000E8F7A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0F20320726003D3BBE /* UIImage+Extension.swift */; };
-		5921249920336669000E8F7A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0F20320726003D3BBE /* UIImage+Extension.swift */; };
-		5921249A2033666B000E8F7A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1020320726003D3BBE /* Bundle+Extension.swift */; };
-		5921249B2033666C000E8F7A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1020320726003D3BBE /* Bundle+Extension.swift */; };
-		5921249C2033666F000E8F7A /* UIScroll+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1120320726003D3BBE /* UIScroll+Extension.swift */; };
-		5921249D20336670000E8F7A /* UIScroll+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1120320726003D3BBE /* UIScroll+Extension.swift */; };
 		5921249E20336673000E8F7A /* NSDictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1220320726003D3BBE /* NSDictionary+Extension.swift */; };
 		5921249F20336673000E8F7A /* NSDictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1220320726003D3BBE /* NSDictionary+Extension.swift */; };
-		592124A020336676000E8F7A /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1320320726003D3BBE /* NSData+Extension.swift */; };
-		592124A120336676000E8F7A /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1320320726003D3BBE /* NSData+Extension.swift */; };
 		592124A220336679000E8F7A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1420320726003D3BBE /* String+Extension.swift */; };
 		592124A320336679000E8F7A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1420320726003D3BBE /* String+Extension.swift */; };
 		592124A62033696C000E8F7A /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592124A52033696C000E8F7A /* URLConstants.swift */; };
@@ -90,23 +74,13 @@
 		59974D1C20320726003D3BBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0120320726003D3BBE /* Constants.swift */; };
 		59974D1D20320726003D3BBE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0320320726003D3BBE /* DataManager.swift */; };
 		59974D1E20320726003D3BBE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0420320726003D3BBE /* Utils.swift */; };
-		59974D2120320726003D3BBE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0920320726003D3BBE /* UIImageView+Extension.swift */; };
 		59974D2220320726003D3BBE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0A20320726003D3BBE /* UIColor+Extension.swift */; };
-		59974D2320320726003D3BBE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0B20320726003D3BBE /* Date+Extension.swift */; };
-		59974D2420320726003D3BBE /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0C20320726003D3BBE /* UILabel+Extension.swift */; };
-		59974D2520320726003D3BBE /* NSOBject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0D20320726003D3BBE /* NSOBject+Extension.swift */; };
 		59974D2620320726003D3BBE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0E20320726003D3BBE /* UIView+Extension.swift */; };
-		59974D2720320726003D3BBE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D0F20320726003D3BBE /* UIImage+Extension.swift */; };
-		59974D2820320726003D3BBE /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1020320726003D3BBE /* Bundle+Extension.swift */; };
-		59974D2920320726003D3BBE /* UIScroll+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1120320726003D3BBE /* UIScroll+Extension.swift */; };
 		59974D2A20320726003D3BBE /* NSDictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1220320726003D3BBE /* NSDictionary+Extension.swift */; };
-		59974D2B20320726003D3BBE /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1320320726003D3BBE /* NSData+Extension.swift */; };
 		59974D2C20320726003D3BBE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1420320726003D3BBE /* String+Extension.swift */; };
 		59974D2D20320726003D3BBE /* LibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1620320726003D3BBE /* LibViewController.swift */; };
 		59974D2E20320726003D3BBE /* LibPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1720320726003D3BBE /* LibPresenter.swift */; };
 		59974D2F20320726003D3BBE /* LibProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1820320726003D3BBE /* LibProtocols.swift */; };
-		59974D3020320726003D3BBE /* LayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1A20320726003D3BBE /* LayerView.swift */; };
-		59974D3120320726003D3BBE /* JGCLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974D1B20320726003D3BBE /* JGCLoadingView.swift */; };
 		59974E3720321104003D3BBE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3020321104003D3BBE /* HomePresenter.swift */; };
 		59974E3820321104003D3BBE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3020321104003D3BBE /* HomePresenter.swift */; };
 		59974E3920321104003D3BBE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59974E3020321104003D3BBE /* HomePresenter.swift */; };
@@ -215,23 +189,13 @@
 		59974D0120320726003D3BBE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		59974D0320320726003D3BBE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		59974D0420320726003D3BBE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		59974D0920320726003D3BBE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		59974D0A20320726003D3BBE /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		59974D0B20320726003D3BBE /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		59974D0C20320726003D3BBE /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
-		59974D0D20320726003D3BBE /* NSOBject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOBject+Extension.swift"; sourceTree = "<group>"; };
 		59974D0E20320726003D3BBE /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		59974D0F20320726003D3BBE /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		59974D1020320726003D3BBE /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
-		59974D1120320726003D3BBE /* UIScroll+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScroll+Extension.swift"; sourceTree = "<group>"; };
 		59974D1220320726003D3BBE /* NSDictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+Extension.swift"; sourceTree = "<group>"; };
-		59974D1320320726003D3BBE /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
 		59974D1420320726003D3BBE /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		59974D1620320726003D3BBE /* LibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibViewController.swift; sourceTree = "<group>"; };
 		59974D1720320726003D3BBE /* LibPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibPresenter.swift; sourceTree = "<group>"; };
 		59974D1820320726003D3BBE /* LibProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibProtocols.swift; sourceTree = "<group>"; };
-		59974D1A20320726003D3BBE /* LayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerView.swift; sourceTree = "<group>"; };
-		59974D1B20320726003D3BBE /* JGCLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGCLoadingView.swift; sourceTree = "<group>"; };
 		59974E3020321104003D3BBE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		59974E3120321104003D3BBE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		59974E3320321104003D3BBE /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
@@ -389,7 +353,6 @@
 				59974D0020320726003D3BBE /* Utils */,
 				59974D0820320726003D3BBE /* Extensions */,
 				59974D1520320726003D3BBE /* Lib */,
-				59974D1920320726003D3BBE /* Views */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -415,17 +378,9 @@
 		59974D0820320726003D3BBE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				59974D0920320726003D3BBE /* UIImageView+Extension.swift */,
 				59974D0A20320726003D3BBE /* UIColor+Extension.swift */,
-				59974D0B20320726003D3BBE /* Date+Extension.swift */,
-				59974D0C20320726003D3BBE /* UILabel+Extension.swift */,
-				59974D0D20320726003D3BBE /* NSOBject+Extension.swift */,
 				59974D0E20320726003D3BBE /* UIView+Extension.swift */,
-				59974D0F20320726003D3BBE /* UIImage+Extension.swift */,
-				59974D1020320726003D3BBE /* Bundle+Extension.swift */,
-				59974D1120320726003D3BBE /* UIScroll+Extension.swift */,
 				59974D1220320726003D3BBE /* NSDictionary+Extension.swift */,
-				59974D1320320726003D3BBE /* NSData+Extension.swift */,
 				59974D1420320726003D3BBE /* String+Extension.swift */,
 			);
 			path = Extensions;
@@ -439,15 +394,6 @@
 				59974D1820320726003D3BBE /* LibProtocols.swift */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		59974D1920320726003D3BBE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				59974D1A20320726003D3BBE /* LayerView.swift */,
-				59974D1B20320726003D3BBE /* JGCLoadingView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		59974D32203208A8003D3BBE /* Scenes */ = {
@@ -876,10 +822,7 @@
 			files = (
 				59974D2E20320726003D3BBE /* LibPresenter.swift in Sources */,
 				59974CDC20320712003D3BBE /* DornaTest.xcdatamodeld in Sources */,
-				59974D2320320726003D3BBE /* Date+Extension.swift in Sources */,
-				59974D2520320726003D3BBE /* NSOBject+Extension.swift in Sources */,
 				592124AA20336A06000E8F7A /* CommunicatorManager.swift in Sources */,
-				59974D2820320726003D3BBE /* Bundle+Extension.swift in Sources */,
 				59711E782032331A0058B3A8 /* HomeViewController.swift in Sources */,
 				59974D1D20320726003D3BBE /* DataManager.swift in Sources */,
 				59974E4320321104003D3BBE /* HomeAssembly.swift in Sources */,
@@ -888,30 +831,23 @@
 				59974D2F20320726003D3BBE /* LibProtocols.swift in Sources */,
 				59974D2D20320726003D3BBE /* LibViewController.swift in Sources */,
 				59974E4620321104003D3BBE /* HomeInteractor.swift in Sources */,
-				59974D2120320726003D3BBE /* UIImageView+Extension.swift in Sources */,
 				59974D2C20320726003D3BBE /* String+Extension.swift in Sources */,
 				59974CD320320712003D3BBE /* AppDelegate.swift in Sources */,
 				59974E4020321104003D3BBE /* HomeProtocols.swift in Sources */,
-				59974D2920320726003D3BBE /* UIScroll+Extension.swift in Sources */,
-				59974D2B20320726003D3BBE /* NSData+Extension.swift in Sources */,
 				59974E3A20321104003D3BBE /* HomeRouter.swift in Sources */,
 				59974D2A20320726003D3BBE /* NSDictionary+Extension.swift in Sources */,
 				59711E7B2032333A0058B3A8 /* HomeDetailViewController.swift in Sources */,
 				59974E3720321104003D3BBE /* HomePresenter.swift in Sources */,
 				59974D2620320726003D3BBE /* UIView+Extension.swift in Sources */,
-				59974D3020320726003D3BBE /* LayerView.swift in Sources */,
 				59711E8820335B6A0058B3A8 /* HomeListModel.swift in Sources */,
-				59974D2420320726003D3BBE /* UILabel+Extension.swift in Sources */,
 				59711E832032351B0058B3A8 /* GrandPrix.swift in Sources */,
 				59974D1C20320726003D3BBE /* Constants.swift in Sources */,
-				59974D2720320726003D3BBE /* UIImage+Extension.swift in Sources */,
 				59974D1E20320726003D3BBE /* Utils.swift in Sources */,
 				59974D2220320726003D3BBE /* UIColor+Extension.swift in Sources */,
 				592124A62033696C000E8F7A /* URLConstants.swift in Sources */,
 				59711E8C20335B7A0058B3A8 /* HomeDetailModel.swift in Sources */,
 				5980E9D42034E82F00F7E664 /* GPSession.swift in Sources */,
 				59E6C62320321D3300F9F54B /* HomeListTableViewCell.swift in Sources */,
-				59974D3120320726003D3BBE /* JGCLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,35 +856,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				592124AB20336A06000E8F7A /* CommunicatorManager.swift in Sources */,
-				592124922033665D000E8F7A /* UILabel+Extension.swift in Sources */,
 				592124A72033696C000E8F7A /* URLConstants.swift in Sources */,
 				5921247E20336338000E8F7A /* LibViewController.swift in Sources */,
 				59711E8920335B6A0058B3A8 /* HomeListModel.swift in Sources */,
-				5921249A2033666B000E8F7A /* Bundle+Extension.swift in Sources */,
 				59974E4420321104003D3BBE /* HomeAssembly.swift in Sources */,
 				59974CE720320712003D3BBE /* DornaTestTests.swift in Sources */,
 				59974E4120321104003D3BBE /* HomeProtocols.swift in Sources */,
-				592124A020336676000E8F7A /* NSData+Extension.swift in Sources */,
 				592124842033636B000E8F7A /* HomeViewController.swift in Sources */,
 				59974E3B20321104003D3BBE /* HomeRouter.swift in Sources */,
 				5921248A2033664F000E8F7A /* DataManager.swift in Sources */,
 				5921249E20336673000E8F7A /* NSDictionary+Extension.swift in Sources */,
-				5921249420336662000E8F7A /* NSOBject+Extension.swift in Sources */,
 				5921248620336647000E8F7A /* Constants.swift in Sources */,
 				59711E7C2032333A0058B3A8 /* HomeDetailViewController.swift in Sources */,
 				592124882033664B000E8F7A /* Utils.swift in Sources */,
-				592124902033665B000E8F7A /* Date+Extension.swift in Sources */,
 				59974E3820321104003D3BBE /* HomePresenter.swift in Sources */,
 				59711E8D20335B7A0058B3A8 /* HomeDetailModel.swift in Sources */,
 				592124822033633E000E8F7A /* LibProtocols.swift in Sources */,
-				5921249820336668000E8F7A /* UIImage+Extension.swift in Sources */,
-				5921249C2033666F000E8F7A /* UIScroll+Extension.swift in Sources */,
 				5980E9D52034E82F00F7E664 /* GPSession.swift in Sources */,
 				592124802033633B000E8F7A /* LibPresenter.swift in Sources */,
 				5921249620336665000E8F7A /* UIView+Extension.swift in Sources */,
 				5980E9DA2037AF2800F7E664 /* HomeDetailTableViewCell.swift in Sources */,
 				59711E842032351B0058B3A8 /* GrandPrix.swift in Sources */,
-				5921248C20336655000E8F7A /* UIImageView+Extension.swift in Sources */,
 				59E6C62420321D3300F9F54B /* HomeListTableViewCell.swift in Sources */,
 				59974E4720321104003D3BBE /* HomeInteractor.swift in Sources */,
 				592124A220336679000E8F7A /* String+Extension.swift in Sources */,
@@ -961,35 +889,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				592124AC20336A06000E8F7A /* CommunicatorManager.swift in Sources */,
-				592124932033665E000E8F7A /* UILabel+Extension.swift in Sources */,
 				592124A82033696C000E8F7A /* URLConstants.swift in Sources */,
 				5921247F20336338000E8F7A /* LibViewController.swift in Sources */,
 				59711E8A20335B6A0058B3A8 /* HomeListModel.swift in Sources */,
-				5921249B2033666C000E8F7A /* Bundle+Extension.swift in Sources */,
 				59974E4520321104003D3BBE /* HomeAssembly.swift in Sources */,
 				59974CF220320712003D3BBE /* DornaTestUITests.swift in Sources */,
 				59974E4220321104003D3BBE /* HomeProtocols.swift in Sources */,
-				592124A120336676000E8F7A /* NSData+Extension.swift in Sources */,
 				592124852033636C000E8F7A /* HomeViewController.swift in Sources */,
 				59974E3C20321104003D3BBE /* HomeRouter.swift in Sources */,
 				5921248B2033664F000E8F7A /* DataManager.swift in Sources */,
 				5921249F20336673000E8F7A /* NSDictionary+Extension.swift in Sources */,
-				5921249520336662000E8F7A /* NSOBject+Extension.swift in Sources */,
 				5921248720336648000E8F7A /* Constants.swift in Sources */,
 				59711E7D2032333A0058B3A8 /* HomeDetailViewController.swift in Sources */,
 				592124892033664B000E8F7A /* Utils.swift in Sources */,
-				592124912033665B000E8F7A /* Date+Extension.swift in Sources */,
 				59974E3920321104003D3BBE /* HomePresenter.swift in Sources */,
 				59711E8E20335B7A0058B3A8 /* HomeDetailModel.swift in Sources */,
 				592124832033633F000E8F7A /* LibProtocols.swift in Sources */,
-				5921249920336669000E8F7A /* UIImage+Extension.swift in Sources */,
-				5921249D20336670000E8F7A /* UIScroll+Extension.swift in Sources */,
 				5980E9D62034E82F00F7E664 /* GPSession.swift in Sources */,
 				592124812033633C000E8F7A /* LibPresenter.swift in Sources */,
 				5921249720336666000E8F7A /* UIView+Extension.swift in Sources */,
 				5980E9DB2037AF2800F7E664 /* HomeDetailTableViewCell.swift in Sources */,
 				59711E852032351B0058B3A8 /* GrandPrix.swift in Sources */,
-				5921248D20336655000E8F7A /* UIImageView+Extension.swift in Sources */,
 				59E6C62520321D3300F9F54B /* HomeListTableViewCell.swift in Sources */,
 				59974E4820321104003D3BBE /* HomeInteractor.swift in Sources */,
 				592124A320336679000E8F7A /* String+Extension.swift in Sources */,

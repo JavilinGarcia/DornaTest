@@ -10,6 +10,7 @@ import UIKit
 
 class HomeDetailViewController: LibViewController {
 
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
@@ -46,6 +47,7 @@ class HomeDetailViewController: LibViewController {
         flagImageView.image = headerModel?.circuit_flag
         prixNameLabel.text = headerModel?.name
         dateLabel.text = headerModel?.allDays
+        backgroundImage.image = headerModel?.backgroundImage
     }
 }
 
@@ -101,7 +103,4 @@ extension HomeDetailViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.userDidTapRow(indexPath.row)
-    }
 }
