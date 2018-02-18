@@ -33,6 +33,11 @@ extension HomeInteractor: HomeInteractorProtocol {
     func getDetail() {
         presenter.reloadDetail(model: currentGrandPrix!)
     }
+    
+    func reloadData() {
+        presenter.showLoading(loadingMessage: Localize(key: "loading_text"))
+        DataManager.sharedInstance.reloadData(delegate: self)
+    }
 }
 
 extension HomeInteractor: GrandPrixesDelegate {
@@ -43,6 +48,7 @@ extension HomeInteractor: GrandPrixesDelegate {
             presenter.showAlertWithTitle(title: Localize(key: "error_title"), message: Localize(key: "error_default_msg"))
         }
         else {
+            grandPrixes = nil
             grandPrixes = prixes
             presenter.reloadData(models: prixes)
         }

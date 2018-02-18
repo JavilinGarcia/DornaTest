@@ -98,6 +98,10 @@ extension HomePresenter: HomePresenterProtocol {
         interactor.userDidTapRow(index)
     }
     
+    func userDidPullToRefresh() {
+        interactor.reloadData()
+    }
+    
     // MARK: - Reload data
     
     func reloadData(models: [GrandPrix]) {

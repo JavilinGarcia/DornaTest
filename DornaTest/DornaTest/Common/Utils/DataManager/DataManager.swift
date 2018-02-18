@@ -21,6 +21,41 @@ class DataManager: NSObject {
     var delegate: GrandPrixesDelegate?
     var currentGpId: String?
     
+    //MARK: - Public Methods
+    
+    func getAllGrandPrixes(delegate: GrandPrixesDelegate) {
+        self.delegate = delegate
+        getFromLocal { (results) in
+            if results.count == 0 {
+                CommunicatorManager.sharedInstance.getAllGrandPrixes(delegate: self)
+            } else {
+                delegate.didGetAllGrandPrixes(prixes: results)
+            }
+        }
+    }
+    
+    func getGrandPrixDetail(gpID: String, delegate: GrandPrixesDelegate) {
+        self.delegate = delegate
+        currentGpId = gpID
+        
+        // Intento recuperar de CoreData, si no hay elementos llamo al servicio
+        
+        getDetailFromLocal(id: gpID) { (results) in
+            if results.count == 0 {
+                CommunicatorManager.sharedInstance.getGrandPrixDetail(id: gpID, delegate: self)
+            } else {
+                delegate.didGetGrandPrixDetail(gpSessions: results)
+            }
+        }
+    }
+    
+    func reloadData(delegate: GrandPrixesDelegate) {
+        self.delegate = delegate
+        deleteAllEntities { (success) in
+            CommunicatorManager.sharedInstance.getAllGrandPrixes(delegate: self)
+        }
+    }
+    
     // MARK: - Get from local
     
     func getFromLocal(completion: (_ results: [GrandPrix]) -> Void) {
@@ -151,10 +186,65 @@ class DataManager: NSObject {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
+    // MARK: - DeleteFromLocal
+    
+    func deleteAllEntities(completion: (_ result: Bool) -> Void)  {
+        let managedContext = self.persistentContainer.viewContext
+        
+        let deleteGPFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GrandPrixEntity")
+        let deleteGPRequest = NSBatchDeleteRequest(fetchRequest: deleteGPFetch)
+        let deleteSessionFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GPSessionEntity")
+        let deleteSessionRequest = NSBatchDeleteRequest(fetchRequest: deleteSessionFetch)
+
+        
+        do {
+            try managedContext.execute(deleteGPRequest)
+            try managedContext.execute(deleteSessionRequest)
+
+            try managedContext.save()
+            completion(true)
+            
+        } catch {
+            completion(false)
+        }
+    }
+    
+    func deleteGranPrixEntity() {
+        //delete all data
+        let managedContext = self.persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GrandPrixEntity")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try managedContext.execute(deleteRequest)
+            try managedContext.save()
+        } catch {
+            print ("There was an error")
+        }
+    }
+    
+    func deleteSessionEntity() {
+        //delete all data
+        let managedContext = self.persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GPSessionEntity")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try managedContext.execute(deleteRequest)
+            try managedContext.save()
+        } catch {
+            print ("There was an error")
+        }
+    }
 
     // MARK: - Parse responses
     
     func parseResponse(response: DataResponse<Any>) {
+        //First delete previous items
+//        deleteGranPrixEntity()
         print("Parse GPs response")
         do{
             if let aResult: NSDictionary = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
@@ -207,6 +297,8 @@ class DataManager: NSObject {
     }
     
     func parseDetailResponse(response: DataResponse<Any>) {
+        //First delete previous items
+//        deleteSessionEntity()
         print("Parse detail response")
         do{
             if let aResult: NSDictionary = try JSONSerialization.jsonObject(with: response.data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
@@ -240,34 +332,6 @@ class DataManager: NSObject {
             }
         } catch let error as NSError  {
             print(error)
-        }
-    }
-    
-    //MARK: - Public Methods
-    
-    func getAllGrandPrixes(delegate: GrandPrixesDelegate) {
-        self.delegate = delegate
-        getFromLocal { (results) in
-            if results.count == 0 {
-                CommunicatorManager.sharedInstance.getAllGrandPrixes(delegate: self)
-            } else {
-                delegate.didGetAllGrandPrixes(prixes: results)
-            }
-        }
-    }
-    
-    func getGrandPrixDetail(gpID: String, delegate: GrandPrixesDelegate) {
-        self.delegate = delegate
-        currentGpId = gpID
-        
-        // Intento recuperar de CoreData, si no hay elementos llamo al servicio
-        
-        getDetailFromLocal(id: gpID) { (results) in
-            if results.count == 0 {
-                CommunicatorManager.sharedInstance.getGrandPrixDetail(id: gpID, delegate: self)
-            } else {
-                delegate.didGetGrandPrixDetail(gpSessions: results)
-            }
         }
     }
     

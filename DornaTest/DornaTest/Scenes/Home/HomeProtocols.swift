@@ -36,6 +36,7 @@ protocol HomePresenterProtocol: LibPresenterProtocol {
     var detailDataSource: [(key: String, value:[HomeDetailModel])]? { get }
     //Methods
     func userDidTapRow(_ index: Int)
+    func userDidPullToRefresh()
     func reloadData(models: [GrandPrix])
     func reloadDetail(model: GrandPrix)
 }
@@ -50,6 +51,7 @@ protocol HomeInteractorProtocol: LibInteractorProtocol {
     //Methods
     func userDidTapRow(_ index: Int)
     func getDetail()
+    func reloadData()
 }
 
 // MARK: - HomeRouterProtocol

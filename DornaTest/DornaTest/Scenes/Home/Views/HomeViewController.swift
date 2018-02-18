@@ -15,9 +15,9 @@ class HomeViewController: LibViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     var presenter: HomePresenterProtocol!
-
     var dataSource: [HomeListModel] = [HomeListModel]()
-    
+    let refreshControl = UIRefreshControl()
+
     // MARK: - Private Methods
     
     override func viewDidLoad() {
@@ -35,16 +35,36 @@ class HomeViewController: LibViewController {
         tableView.dataSource = self
         let nib = UINib.init(nibName: String(describing: HomeListTableViewCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: HomeListTableViewCell.getCellIdentifier())
+        
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        // Configure Refresh Control
+        let color = UIColor(hex: kGreenColor, alpha: 1.0)
+        refreshControl.tintColor = color
+        refreshControl.attributedTitle = NSAttributedString(string: Localize(key: "updating_data"), attributes: [NSAttributedStringKey.foregroundColor:color as Any])
+
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
     }
+    
+    @objc func refreshData(_ sender: Any) {
+        refreshControl.endRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(850)) {
+            self.presenter.userDidPullToRefresh()
+        }
+    }
+    
 }
 
 // MARK: - HomeViewControllerProtocol
 
 extension HomeViewController: HomeViewControllerProtocol {
     
-    func reloadData(listModel: [HomeListModel]) {
-        
-//        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    func reloadData(listModel: [HomeListModel]) {        
+        refreshControl.endRefreshing()
 
         dataSource = listModel
         tableView.reloadData()
