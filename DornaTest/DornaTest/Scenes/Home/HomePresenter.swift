@@ -156,7 +156,11 @@ extension HomePresenter: HomePresenterProtocol {
         let dic: Dictionary = prepareData(model: model)
         // Sort by day
         detailDataSource = dic.sorted(by: { (first: (key: String, value:[HomeDetailModel]), second: (key: String, value:[HomeDetailModel])) -> Bool in
-            return first.key.components(separatedBy: " ").last!.compare(second.key.components(separatedBy: " ").last!) == .orderedAscending
+            
+            let date1 = Date.toDate(str: first.key, "EEEE dd MMM")
+            let date2 = Date.toDate(str: second.key, "EEEE dd MMM")
+            
+            return date1?.compare(date2!) == .orderedAscending
         })
         
         detailViewController?.reloadData(headerModel: headerModel, detailModel: detailDataSource!)

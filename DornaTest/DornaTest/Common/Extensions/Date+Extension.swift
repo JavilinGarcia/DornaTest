@@ -37,7 +37,7 @@ extension Date {
     
     func dayOfWeek() -> String? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE dd"
+        dateFormatter.dateFormat = "EEEE dd MMM"
         dateFormatter.calendar = Calendar(identifier: .iso8601)
         dateFormatter.timeZone = TimeZone.autoupdatingCurrent
         dateFormatter.locale = Locale.autoupdatingCurrent
