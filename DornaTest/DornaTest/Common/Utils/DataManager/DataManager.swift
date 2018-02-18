@@ -51,9 +51,7 @@ class DataManager: NSObject {
     
     func reloadData(delegate: GrandPrixesDelegate) {
         self.delegate = delegate
-        deleteAllEntities { (success) in
-            CommunicatorManager.sharedInstance.getAllGrandPrixes(delegate: self)
-        }
+        CommunicatorManager.sharedInstance.getAllGrandPrixes(delegate: self)
     }
     
     // MARK: - Get from local
@@ -192,6 +190,7 @@ class DataManager: NSObject {
     // MARK: - Delete From Local
     
     func deleteAllEntities(completion: (_ result: Bool) -> Void)  {
+        print("Delete all entities")
         let managedContext = self.persistentContainer.viewContext
         
         let deleteGPFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "GrandPrixEntity")
