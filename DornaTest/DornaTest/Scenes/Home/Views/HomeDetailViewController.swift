@@ -39,6 +39,7 @@ class HomeDetailViewController: LibViewController {
         tableView.dataSource = self
         let nib = UINib.init(nibName: String(describing: HomeDetailTableViewCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: HomeDetailTableViewCell.getCellIdentifier())
+        tableView.accessibilityIdentifier = "gpDetailTableViewIdentifier" //For UITests
     }
     
     func reloadHeader() {

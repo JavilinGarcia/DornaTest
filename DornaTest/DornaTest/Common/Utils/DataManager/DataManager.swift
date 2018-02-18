@@ -161,6 +161,7 @@ class DataManager: NSObject {
             completion(true)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+            completion(false)
         }
     }
     
@@ -184,6 +185,7 @@ class DataManager: NSObject {
             completion(true)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+            completion(false)
         }
     }
     

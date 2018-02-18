@@ -35,6 +35,7 @@ class HomeViewController: LibViewController {
         tableView.dataSource = self
         let nib = UINib.init(nibName: String(describing: HomeListTableViewCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: HomeListTableViewCell.getCellIdentifier())
+        tableView.accessibilityIdentifier = "gpTableViewIdentifier" //For UITests
         
         // Add Refresh Control to Table View
         if #available(iOS 10.0, *) {

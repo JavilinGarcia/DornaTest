@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 
 class HomeInteractor: NSObject {
-    
     var presenter: HomePresenterProtocol!
     var router: HomeRouterProtocol!
     var grandPrixes: [GrandPrix]?
@@ -62,7 +61,6 @@ extension HomeInteractor: GrandPrixesDelegate {
         }
         else {
             currentGrandPrix?.sessions = gpSessions
-
             presenter.dismissLoadingWithCompletion(animated:true, completion: {
                 self.router.navigateToDetail(self.presenter)
             })

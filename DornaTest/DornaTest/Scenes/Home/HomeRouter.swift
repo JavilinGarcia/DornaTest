@@ -11,11 +11,9 @@ import UIKit
 class HomeRouter: NSObject {
     var viewController: HomeViewController!
     var presenter: HomePresenterProtocol!
-
 }
 
 extension HomeRouter: HomeRouterProtocol {
-    
     func navigateToDetail(_ aPresenter: HomePresenterProtocol) {
         let homeDetailViewController: HomeDetailViewController = HomeDetailViewController()
         presenter.detailViewController = homeDetailViewController

@@ -9,7 +9,9 @@
 import XCTest
 
 class DornaTestUITests: XCTestCase {
-        
+    
+    var app: XCUIApplication!
+
     override func setUp() {
         super.setUp()
         
@@ -17,6 +19,9 @@ class DornaTestUITests: XCTestCase {
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        
+        app = XCUIApplication()
+
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
 
@@ -28,9 +33,25 @@ class DornaTestUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUserDidTapRow() {
+        let tableView = app.tables.containing(XCUIElement.ElementType.table, identifier: "gpTableViewIdentifier")
+        let firstCell = tableView.cells.element(boundBy: 0)
+        firstCell.tap()
+        //Wait for show detail result
+        let _ = app.tableRows["HomeDetailTableViewCellIdentifier"].waitForExistence(timeout: 3)
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        //Wait for show main tableview
+        let _ = app.tableRows["gpTableViewIdentifier"].waitForExistence(timeout: 3)
+
     }
     
+    func testUserDidPullTorefresh() {
+        let tableView = app.tables.containing(XCUIElement.ElementType.table, identifier: "gpTableViewIdentifier")
+        let firstCell = tableView.cells.element(boundBy: 0)
+        
+        let start = firstCell.coordinate(withNormalizedOffset: CGVector.init(dx: 0, dy: 0))
+        let finish = firstCell.coordinate(withNormalizedOffset: CGVector.init(dx: 0, dy: 3))
+            
+        start.press(forDuration: 0, thenDragTo: finish)
+    }
 }
