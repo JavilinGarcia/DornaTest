@@ -63,7 +63,6 @@ extension HomeDetailViewController: HomeDetailViewControllerProtocol {
     }
 }
 
-
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension HomeDetailViewController: UITableViewDelegate, UITableViewDataSource {
